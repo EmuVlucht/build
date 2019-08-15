@@ -35,7 +35,7 @@ class UpdateInfo {
 }
 
 class UpdateService {
-  static const _updateChannel = MethodChannel('com.uploadserver.app/update');
+  static const _updateChannel = MethodChannel('com.twos.netshelfy.verseapp/update');
 
   // ── Cek apakah ada update ──────────────────────────────────────
   /// Return null  = tidak ada update / gagal cek
@@ -157,10 +157,18 @@ class UpdateService {
 
   // ── Helper: cache dir ──────────────────────────────────────────
   static Future<String> _getCacheDir() async {
-    // Gunakan cache dir internal app (tidak butuh permission storage)
-    final dir = Directory('/data/data/com.uploadserver.app/cache');
-    if (dir.existsSync()) return dir.path;
-    // Fallback: pakai temp
+    // Coba beberapa path cache internal Android yang umum
+    final candidates = [
+      '/data/user/0/com.twos.netshelfy.verseapp/cache',
+      '/data/data/com.twos.netshelfy.verseapp/cache',
+    ];
+    for (final p in candidates) {
+      try {
+        final d = Directory(p);
+        if (!d.existsSync()) d.createSync(recursive: true);
+        if (d.existsSync()) return p;
+      } catch (_) {}
+    }
     return Directory.systemTemp.path;
   }
 }

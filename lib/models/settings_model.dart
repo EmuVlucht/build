@@ -6,12 +6,14 @@ class AppSettings {
   final ThemeMode themeMode;
   final String basicAuth;
   final String basicAuthUpload;
+  final bool keepAlive;  // tetap aktif di background
 
   const AppSettings({
     this.port = 8000,
     this.themeMode = ThemeMode.system,
     this.basicAuth = '',
     this.basicAuthUpload = '',
+    this.keepAlive = false,
   });
 
   String get themeArg {
@@ -35,18 +37,20 @@ class AppSettings {
     return parts.join(' ');
   }
 
-  static const _kPort   = 'port';
-  static const _kTheme  = 'theme';
-  static const _kAuth   = 'basic_auth';
-  static const _kAuthUp = 'basic_auth_upload';
+  static const _kPort      = 'port';
+  static const _kTheme     = 'theme';
+  static const _kAuth      = 'basic_auth';
+  static const _kAuthUp    = 'basic_auth_upload';
+  static const _kKeepAlive = 'keep_alive';
 
   static Future<AppSettings> load() async {
     final prefs = await SharedPreferences.getInstance();
     return AppSettings(
-      port:            prefs.getInt(_kPort) ?? 8000,
+      port:            prefs.getInt(_kPort)    ?? 8000,
       themeMode:       _themeFromStr(prefs.getString(_kTheme) ?? 'system'),
-      basicAuth:       prefs.getString(_kAuth)   ?? '',
-      basicAuthUpload: prefs.getString(_kAuthUp) ?? '',
+      basicAuth:       prefs.getString(_kAuth)    ?? '',
+      basicAuthUpload: prefs.getString(_kAuthUp)  ?? '',
+      keepAlive:       prefs.getBool(_kKeepAlive) ?? false,
     );
   }
 
@@ -56,6 +60,7 @@ class AppSettings {
     await prefs.setString(_kTheme, _themeToStr(themeMode));
     await prefs.setString(_kAuth, basicAuth);
     await prefs.setString(_kAuthUp, basicAuthUpload);
+    await prefs.setBool(_kKeepAlive, keepAlive);
   }
 
   AppSettings copyWith({
@@ -63,12 +68,14 @@ class AppSettings {
     ThemeMode? themeMode,
     String? basicAuth,
     String? basicAuthUpload,
+    bool? keepAlive,
   }) {
     return AppSettings(
       port:            port            ?? this.port,
       themeMode:       themeMode       ?? this.themeMode,
       basicAuth:       basicAuth       ?? this.basicAuth,
       basicAuthUpload: basicAuthUpload ?? this.basicAuthUpload,
+      keepAlive:       keepAlive       ?? this.keepAlive,
     );
   }
 

@@ -4,6 +4,7 @@ server_bridge.py — Chaquopy bridge untuk uploadserver.
 start(directory, port, theme, basic_auth, basic_auth_upload)
 """
 
+import os
 import threading
 import http.server
 import inspect
@@ -78,13 +79,20 @@ def start(directory, port=8000, theme="auto",
         except Exception:
             pass
 
+        # Pindah ke direktori yang dipilih user.
+        # Ini cara paling kompatibel — uploadserver v6 serve dari CWD.
+        try:
+            os.chdir(str(directory))
+        except Exception as e:
+            return f"error: cannot chdir to {directory}: {e}"
+
         ev            = _pause_event
         auth_check    = _make_auth_checker(basic_auth)
         auth_up_check = _make_auth_checker(basic_auth_upload)
 
         class PausableHandler(BaseHandler):
-            def __init__(self, *args, **kwargs):
-                super().__init__(*args, directory=str(directory), **kwargs)
+            # Tidak override __init__ — biarkan uploadserver handle sendiri.
+            # Directory sudah di-set via os.chdir() di atas.
 
             def handle(self):
                 ev.wait()

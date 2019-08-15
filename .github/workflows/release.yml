@@ -1,4 +1,4 @@
-name: Release UploadServer APK
+name: Release NetShelfy+ APK
 
 # Trigger: push tag dengan format v1.0.0 atau v1.0.0+2
 on:
@@ -61,9 +61,9 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
-          name: "UploadServer ${{ env.VERSION }}"
+          name: "NetShelfy+ ${{ env.VERSION }}"
           body: |
-            ## UploadServer ${{ env.VERSION }} (build ${{ env.BUILD }})
+            ## NetShelfy+ ${{ env.VERSION }} (build ${{ env.BUILD }})
 
             ### Cara Install
             1. Download `app-release.apk` di bawah
@@ -71,24 +71,20 @@ jobs:
             3. Atau buka app → notif update otomatis muncul
 
             ### Changelog
-            **🚀 Features**
-            - Turn your Android device into a local HTTP file upload server
-            - Browse and serve files from any directory on the device
-            - Basic auth support for upload protection
-            - Configurable port and theme via Settings screen
-            - Auto-update: app checks GitHub Releases and installs new APK in-app
+            **♻️ Changes**
+            - Project renamed from UploadServer to Netshelfy
+            - Package ID changed: `com.uploadserver.app` → `com.twos.netshelfy.verseapp`
 
-            **🧱 Stack**
-            - Flutter (Dart) — UI with Material Design
-            - Kotlin — Android native bridge via MethodChannel
-            - Python (Chaquopy) — embedded HTTP server via server_bridge.py
+            **🚀 New**
+            - Added `foreground_service.dart` — server now runs persistently
+              in the background via `flutter_foreground_task`
+            - Added `ic_launcher_foreground.png` assets across all mipmap
+              densities (hdpi / mdpi / xhdpi / xxhdpi / xxxhdpi)
 
-            **⚙️ CI/CD**
-            - Automated APK build on push/pull request (build.yml)
-            - Automated GitHub Release on version tag (release.yml)
-
-            **📄 License**
-            - Released under the MIT License
+            **🔧 Updated**
+            - `pubspec.yaml`: added `flutter_foreground_task ^8.0.1`
+            - `LICENSE`: added `flutter_foreground_task` as acknowledged
+              third-party component
           files: build/app/outputs/flutter-apk/app-release.apk
           draft: false
           prerelease: false

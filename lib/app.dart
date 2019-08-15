@@ -27,7 +27,7 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'UploadServer',
+      title: 'NetShelfy+',
       debugShowCheckedModeBanner: false,
       themeMode: _settings.themeMode,
       theme: ThemeData(

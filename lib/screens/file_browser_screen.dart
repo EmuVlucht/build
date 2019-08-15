@@ -8,6 +8,48 @@ class _StorageTab {
   const _StorageTab({required this.label, required this.icon, required this.root});
 }
 
+// Deteksi path USB/OTG yang sebenarnya di runtime
+List<String> _findUsbPaths() {
+  final candidates = <String>[];
+
+  // Scan /storage/ — folder selain 'emulated' dan 'self' kemungkinan USB/SD
+  try {
+    final storageDir = Directory('/storage');
+    if (storageDir.existsSync()) {
+      for (final entry in storageDir.listSync().whereType<Directory>()) {
+        final name = entry.path.split('/').last;
+        if (name != 'emulated' && name != 'self') {
+          candidates.add(entry.path);
+        }
+      }
+    }
+  } catch (_) {}
+
+  // Tambah path umum lainnya sebagai fallback
+  for (final p in [
+    '/mnt/media_rw',
+    '/mnt/usb_storage',
+    '/mnt/usbdisk',
+  ]) {
+    try {
+      final d = Directory(p);
+      if (d.existsSync()) {
+        // Kalau isinya ada folder, tambah subfolder-nya
+        final subs = d.listSync().whereType<Directory>().toList();
+        if (subs.isNotEmpty) {
+          for (final s in subs) candidates.add(s.path);
+        } else {
+          candidates.add(p);
+        }
+      }
+    } catch (_) {}
+  }
+
+  // Hilangkan duplikat
+  final seen = <String>{};
+  return candidates.where((p) => seen.add(p)).toList();
+}
+
 class FileBrowserScreen extends StatefulWidget {
   const FileBrowserScreen({super.key});
 
@@ -18,13 +60,7 @@ class FileBrowserScreen extends StatefulWidget {
 class _FileBrowserScreenState extends State<FileBrowserScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabCtrl;
-
-  final _tabs = const [
-    _StorageTab(label: 'Internal',    icon: Icons.phone_android_rounded, root: '/storage/emulated/0'),
-    _StorageTab(label: 'Memory Card', icon: Icons.sd_card_rounded,       root: '/storage/sdcard1'),
-    _StorageTab(label: 'USB Storage', icon: Icons.usb_rounded,           root: '/storage/usbdisk'),
-    _StorageTab(label: 'System',      icon: Icons.folder_special_rounded, root: '/'),
-  ];
+  late List<_StorageTab> _tabs;
 
   final Map<int, String>       _paths   = {};
   final Map<int, List<String>> _history = {};
@@ -32,6 +68,28 @@ class _FileBrowserScreenState extends State<FileBrowserScreen>
   @override
   void initState() {
     super.initState();
+
+    // Deteksi USB/OTG secara dinamis
+    final usbPaths = _findUsbPaths();
+    final usbTabs  = usbPaths.isNotEmpty
+        ? usbPaths.map((p) => _StorageTab(
+              label: p.split('/').last,
+              icon:  Icons.usb_rounded,
+              root:  p,
+            )).toList()
+        : [const _StorageTab(
+              label: 'USB Storage',
+              icon:  Icons.usb_rounded,
+              root:  '/storage/usbdisk',
+            )];
+
+    _tabs = [
+      const _StorageTab(label: 'Internal',    icon: Icons.phone_android_rounded, root: '/storage/emulated/0'),
+      const _StorageTab(label: 'Memory Card', icon: Icons.sd_card_rounded,       root: '/storage/sdcard1'),
+      ...usbTabs,
+      const _StorageTab(label: 'System',      icon: Icons.folder_special_rounded, root: '/'),
+    ];
+
     _tabCtrl = TabController(length: _tabs.length, vsync: this)
       ..addListener(() { if (!_tabCtrl.indexIsChanging) setState(() {}); });
     for (int i = 0; i < _tabs.length; i++) {

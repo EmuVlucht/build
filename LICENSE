@@ -29,6 +29,7 @@ This project includes the following third-party components:
 - permission_handler — MIT License
 - shared_preferences — BSD 3-Clause License
 - package_info_plus — MIT License
+- flutter_foreground_task — MIT License
 
 Each component retains its own license terms. See their respective
 repositories for full license text.

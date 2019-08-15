@@ -2,10 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:permission_handler/permission_handler.dart';
 import '../models/settings_model.dart';
 import '../services/server_service.dart';
 import '../services/update_service.dart';
+import '../services/foreground_service.dart';
 import 'file_browser_screen.dart';
 import 'settings_screen.dart';
 import 'update_dialog.dart';
@@ -43,12 +45,29 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     _pulseAnim = Tween(begin: 1.0, end: 1.06).animate(
       CurvedAnimation(parent: _pulseCtrl, curve: Curves.easeInOut));
     _requestPermissions();
-    // Cek update di background setelah app terbuka
     Future.delayed(const Duration(seconds: 2), _checkForUpdate);
+    // Dengarkan event dari foreground service (tombol Stop di notifikasi)
+    FlutterForegroundTask.addTaskDataCallback(_onForegroundData);
+  }
+
+  void _onForegroundData(Object data) {
+    if (data is Map && data['action'] == 'stop') {
+      _service.stop();
+      ForegroundSvc.stop();
+      if (mounted) {
+        setState(() {
+          _privateIp  = null;
+          _publicIp   = null;
+          _fetchingIp = false;
+          _ipExpanded = false;
+        });
+      }
+    }
   }
 
   @override
   void dispose() {
+    FlutterForegroundTask.removeTaskDataCallback(_onForegroundData);
     _pulseCtrl.dispose();
     _service.dispose();
     super.dispose();
@@ -60,6 +79,8 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
       if (await Permission.manageExternalStorage.isDenied) {
         await Permission.manageExternalStorage.request();
       }
+      // Notifikasi untuk foreground service (Android 13+)
+      await ForegroundSvc.requestPermission();
     }
   }
 
@@ -147,7 +168,14 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
       if (err != null) {
         _showError(err);
       } else {
-        _fetchAllIps(); // fetch semua IP di background
+        _fetchAllIps();
+        // Start foreground service jika keepAlive aktif
+        if (_settings.keepAlive) {
+          await ForegroundSvc.start(
+            directory: _selectedFolder,
+            port: _settings.port,
+          );
+        }
       }
     } else {
       _showControlSheet(state);
@@ -237,6 +265,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 onTap: () {
                   Navigator.pop(ctx);
                   _service.stop();
+                  ForegroundSvc.stop();
                   setState(() {
                     _privateIp  = null;
                     _publicIp   = null;
@@ -263,7 +292,10 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     await Navigator.push(
       context,
       MaterialPageRoute(builder: (_) => SettingsScreen(
-        settings: _settings, onChanged: widget.onSettingsChanged)));
+        settings: _settings,
+        onChanged: widget.onSettingsChanged,
+        selectedFolder: _selectedFolder,
+      )));
   }
 
   @override
@@ -274,10 +306,11 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
       builder: (context, snap) {
         final state = snap.data ?? ServerState.idle;
         final isRunning = state != ServerState.idle;
-        return Scaffold(
+        return WithForegroundTask(
+          child: Scaffold(
           backgroundColor: Theme.of(context).colorScheme.surface,
           appBar: AppBar(
-            title: const Text('UploadServer', style: TextStyle(fontWeight: FontWeight.bold)),
+            title: const Text('NetShelfy+', style: TextStyle(fontWeight: FontWeight.bold)),
             centerTitle: true,
             elevation: 0,
             actions: [
@@ -352,7 +385,8 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
               ),
             ),
           ]),
-        );
+        ),
+      );
       },
     );
   }

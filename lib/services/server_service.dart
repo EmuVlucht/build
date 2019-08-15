@@ -5,7 +5,7 @@ import '../models/settings_model.dart';
 enum ServerState { idle, active, paused }
 
 class ServerService {
-  static const _channel = MethodChannel('com.uploadserver.app/server');
+  static const _channel = MethodChannel('com.twos.netshelfy.verseapp/server');
 
   ServerState _state = ServerState.idle;
   final _stateCtrl = StreamController<ServerState>.broadcast();

@@ -5,7 +5,13 @@ import '../models/settings_model.dart';
 class SettingsScreen extends StatefulWidget {
   final AppSettings settings;
   final ValueChanged<AppSettings> onChanged;
-  const SettingsScreen({super.key, required this.settings, required this.onChanged});
+  final String selectedFolder;
+  const SettingsScreen({
+    super.key,
+    required this.settings,
+    required this.onChanged,
+    this.selectedFolder = '/sdcard',
+  });
 
   @override
   State<SettingsScreen> createState() => _SettingsScreenState();
@@ -68,6 +74,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       port: port.clamp(1, 65535),
       basicAuth: basicAuth,
       basicAuthUpload: basicAuthUpload,
+      keepAlive: _s.keepAlive,
     );
     widget.onChanged(updated);
     Navigator.pop(context);
@@ -83,7 +90,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final parts = [
       'python -m uploadserver',
       '  --bind 0.0.0.0',
-      '  --directory /sdcard',
+      '  --directory ${widget.selectedFolder}',
       '  --theme ${_s.themeArg}',
     ];
     if (_authEnabled && _authUserCtrl.text.isNotEmpty && _authPassCtrl.text.isNotEmpty) {
@@ -115,6 +122,70 @@ class _SettingsScreenState extends State<SettingsScreen> {
         children: [
           _sectionLabel('Tampilan'),
           _card([_themeTile(cs)]),
+
+          _sectionLabel('Latar Belakang'),
+          _card([
+            Padding(
+              padding: const EdgeInsets.all(14),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(children: [
+                    Container(
+                      width: 32, height: 32,
+                      decoration: BoxDecoration(
+                        color: Colors.green.withOpacity(0.12),
+                        borderRadius: BorderRadius.circular(9),
+                      ),
+                      child: const Icon(Icons.bolt_rounded,
+                          size: 18, color: Colors.green),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text('Tetap Aktif di Background',
+                            style: TextStyle(fontSize: 15)),
+                        Text('Server tetap jalan meski app ditutup',
+                            style: TextStyle(fontSize: 11,
+                                color: cs.onSurfaceVariant)),
+                      ],
+                    )),
+                    Switch(
+                      value: _s.keepAlive,
+                      onChanged: (v) {
+                        setState(() => _s = _s.copyWith(keepAlive: v));
+                        widget.onChanged(_s);
+                      },
+                    ),
+                  ]),
+                  // Hint saat aktif
+                  if (_s.keepAlive) ...[
+                    const SizedBox(height: 10),
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.green.withOpacity(0.06),
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                            color: Colors.green.withOpacity(0.2)),
+                      ),
+                      child: Row(children: [
+                        const Icon(Icons.notifications_outlined,
+                            size: 14, color: Colors.green),
+                        const SizedBox(width: 8),
+                        Expanded(child: Text(
+                          'Notifikasi permanen akan muncul selama server aktif',
+                          style: TextStyle(fontSize: 11,
+                              color: Colors.green.shade700, height: 1.4),
+                        )),
+                      ]),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ]),
 
           _sectionLabel('Server'),
           _card([
@@ -173,8 +244,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ListTile(
               leading: Icon(Icons.info_outline, color: cs.primary),
               title: const Text('Versi'),
-              subtitle: const Text('UploadServer Android'),
-              trailing: Text('1.0.0',
+              subtitle: const Text('NetShelfy+ for Android'),
+              trailing: Text('1.0.1',
                   style: TextStyle(fontFamily: 'monospace', fontSize: 12, color: cs.onSurfaceVariant)),
             ),
           ]),

@@ -7,7 +7,7 @@ plugins {
 apply plugin: 'com.chaquo.python'
 
 android {
-    namespace "com.uploadserver.app"
+    namespace "com.twos.netshelfy.verseapp"
     compileSdk flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
@@ -21,7 +21,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.uploadserver.app"
+        applicationId "com.twos.netshelfy.verseapp"
         minSdk 24
         targetSdk flutter.targetSdkVersion
         versionCode flutter.versionCode

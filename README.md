@@ -1,4 +1,4 @@
-# UploadServer
+# NetShelfy+
 
 Aplikasi Flutter — jalankan `uploadserver` (Python) di Android **tanpa Termux**.
 
@@ -8,7 +8,7 @@ Python 3.11 + `uploadserver` di-bundle ke APK via **Chaquopy**.
 
 1. Upload semua file ini ke repo GitHub
 2. Buka tab **Actions** → tunggu workflow selesai (~10–15 menit)
-3. Download APK dari **Artifacts → uploadserver-release**
+3. Download APK dari **Artifacts → netshelfy-release**
 
 ## Fitur
 
