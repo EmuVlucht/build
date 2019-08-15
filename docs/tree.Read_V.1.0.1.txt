@@ -1,0 +1,3359 @@
+cat <<'EOF' > /dev/null
+Path: /root/release
+Date scan: 2026-03-18
+Time scan: 23-15-00
+content scan:
+release/
+├── .github/
+│   ├── .nomedia
+│   └── workflows/
+│       ├── .nomedia
+│       ├── build.yml
+│       └── release.yml
+├── .gitignore
+├── .metadata
+├── .nomedia
+├── LICENSE
+├── README.md
+├── analysis_options.yaml
+├── android/
+│   ├── .nomedia
+│   ├── app/
+│   │   ├── .nomedia
+│   │   ├── build.gradle
+│   │   ├── proguard-rules.pro
+│   │   └── src/
+│   │       ├── .nomedia
+│   │       └── main/
+│   │           ├── .nomedia
+│   │           ├── AndroidManifest.xml
+│   │           ├── kotlin/
+│   │           │   ├── .nomedia
+│   │           │   └── com/
+│   │           │       ├── .nomedia
+│   │           │       ├── twos/
+│   │           │       │   ├── .nomedia
+│   │           │       │   └── netshelfy/
+│   │           │       │       ├── .nomedia
+│   │           │       │       └── verseapp/
+│   │           │       │           ├── .nomedia
+│   │           │       │           └── MainActivity.kt
+│   │           │       └── uploadserver/
+│   │           │           ├── .nomedia
+│   │           │           └── app/
+│   │           │               ├── .nomedia
+│   │           │               └── MainActivity.kt
+│   │           ├── python/
+│   │           │   ├── .nomedia
+│   │           │   └── server_bridge.py
+│   │           └── res/
+│   │               ├── .nomedia
+│   │               ├── drawable/
+│   │               │   ├── .nomedia
+│   │               │   ├── ic_launcher_foreground.xml
+│   │               │   └── launch_background.xml
+│   │               ├── mipmap-anydpi-v26/
+│   │               │   ├── .nomedia
+│   │               │   ├── ic_launcher.xml
+│   │               │   └── ic_launcher_round.xml
+│   │               ├── mipmap-hdpi/
+│   │               │   ├── .nomedia
+│   │               │   ├── ic_launcher.png
+│   │               │   └── ic_launcher_foreground.png
+│   │               ├── mipmap-mdpi/
+│   │               │   ├── .nomedia
+│   │               │   ├── ic_launcher.png
+│   │               │   └── ic_launcher_foreground.png
+│   │               ├── mipmap-xhdpi/
+│   │               │   ├── .nomedia
+│   │               │   ├── ic_launcher.png
+│   │               │   └── ic_launcher_foreground.png
+│   │               ├── mipmap-xxhdpi/
+│   │               │   ├── .nomedia
+│   │               │   ├── ic_launcher.png
+│   │               │   └── ic_launcher_foreground.png
+│   │               ├── mipmap-xxxhdpi/
+│   │               │   ├── .nomedia
+│   │               │   ├── ic_launcher.png
+│   │               │   └── ic_launcher_foreground.png
+│   │               ├── values/
+│   │               │   ├── .nomedia
+│   │               │   ├── colors.xml
+│   │               │   ├── strings.xml
+│   │               │   └── styles.xml
+│   │               ├── values-night/
+│   │               │   ├── .nomedia
+│   │               │   └── styles.xml
+│   │               └── xml/
+│   │                   ├── .nomedia
+│   │                   └── file_paths.xml
+│   ├── build.gradle
+│   ├── gradle/
+│   │   ├── .nomedia
+│   │   └── wrapper/
+│   │       ├── .nomedia
+│   │       └── gradle-wrapper.properties
+│   ├── gradle.properties
+│   └── settings.gradle
+├── assets/
+│   └── .nomedia
+├── docs/
+│   └── .nomedia
+├── lib/
+│   ├── .nomedia
+│   ├── app.dart
+│   ├── main.dart
+│   ├── models/
+│   │   ├── .nomedia
+│   │   └── settings_model.dart
+│   ├── screens/
+│   │   ├── .nomedia
+│   │   ├── file_browser_screen.dart
+│   │   ├── home_screen.dart
+│   │   ├── settings_screen.dart
+│   │   └── update_dialog.dart
+│   └── services/
+│       ├── .nomedia
+│       ├── foreground_service.dart
+│       ├── server_service.dart
+│       └── update_service.dart
+└── pubspec.yaml
+
+34 directories, 81 files
+EOF
+
+# folder create:
+mkdir -p ".github"
+mkdir -p ".github/workflows"
+mkdir -p "android"
+mkdir -p "android/app"
+mkdir -p "android/app/src"
+mkdir -p "android/app/src/main"
+mkdir -p "android/app/src/main/kotlin"
+mkdir -p "android/app/src/main/kotlin/com"
+mkdir -p "android/app/src/main/kotlin/com/twos"
+mkdir -p "android/app/src/main/kotlin/com/twos/netshelfy"
+mkdir -p "android/app/src/main/kotlin/com/twos/netshelfy/verseapp"
+mkdir -p "android/app/src/main/kotlin/com/uploadserver"
+mkdir -p "android/app/src/main/kotlin/com/uploadserver/app"
+mkdir -p "android/app/src/main/python"
+mkdir -p "android/app/src/main/res"
+mkdir -p "android/app/src/main/res/drawable"
+mkdir -p "android/app/src/main/res/mipmap-anydpi-v26"
+mkdir -p "android/app/src/main/res/mipmap-hdpi"
+mkdir -p "android/app/src/main/res/mipmap-mdpi"
+mkdir -p "android/app/src/main/res/mipmap-xhdpi"
+mkdir -p "android/app/src/main/res/mipmap-xxhdpi"
+mkdir -p "android/app/src/main/res/mipmap-xxxhdpi"
+mkdir -p "android/app/src/main/res/values"
+mkdir -p "android/app/src/main/res/values-night"
+mkdir -p "android/app/src/main/res/xml"
+mkdir -p "android/gradle"
+mkdir -p "android/gradle/wrapper"
+mkdir -p "assets"
+mkdir -p "docs"
+mkdir -p "lib"
+mkdir -p "lib/models"
+mkdir -p "lib/screens"
+mkdir -p "lib/services"
+
+# file create:
+touch ".nomedia"
+touch ".github/.nomedia"
+touch ".github/workflows/.nomedia"
+touch "android/.nomedia"
+touch "android/app/.nomedia"
+touch "android/app/src/.nomedia"
+touch "android/app/src/main/.nomedia"
+touch "android/app/src/main/kotlin/.nomedia"
+touch "android/app/src/main/kotlin/com/.nomedia"
+touch "android/app/src/main/kotlin/com/twos/.nomedia"
+touch "android/app/src/main/kotlin/com/twos/netshelfy/.nomedia"
+touch "android/app/src/main/kotlin/com/twos/netshelfy/verseapp/.nomedia"
+touch "android/app/src/main/kotlin/com/uploadserver/.nomedia"
+touch "android/app/src/main/kotlin/com/uploadserver/app/.nomedia"
+touch "android/app/src/main/python/.nomedia"
+touch "android/app/src/main/res/.nomedia"
+touch "android/app/src/main/res/drawable/.nomedia"
+touch "android/app/src/main/res/mipmap-anydpi-v26/.nomedia"
+touch "android/app/src/main/res/mipmap-hdpi/.nomedia"
+touch "android/app/src/main/res/mipmap-mdpi/.nomedia"
+touch "android/app/src/main/res/mipmap-xhdpi/.nomedia"
+touch "android/app/src/main/res/mipmap-xxhdpi/.nomedia"
+touch "android/app/src/main/res/mipmap-xxxhdpi/.nomedia"
+touch "android/app/src/main/res/values/.nomedia"
+touch "android/app/src/main/res/values-night/.nomedia"
+touch "android/app/src/main/res/xml/.nomedia"
+touch "android/gradle/.nomedia"
+touch "android/gradle/wrapper/.nomedia"
+touch "assets/.nomedia"
+touch "docs/.nomedia"
+touch "lib/.nomedia"
+touch "lib/models/.nomedia"
+touch "lib/screens/.nomedia"
+touch "lib/services/.nomedia"
+
+touch ".github/workflows/build.yml"
+touch ".github/workflows/release.yml"
+touch ".gitignore"
+touch ".metadata"
+touch "LICENSE"
+touch "README.md"
+touch "analysis_options.yaml"
+touch "android/app/build.gradle"
+touch "android/app/proguard-rules.pro"
+touch "android/app/src/main/AndroidManifest.xml"
+touch "android/app/src/main/kotlin/com/twos/netshelfy/verseapp/MainActivity.kt"
+touch "android/app/src/main/kotlin/com/uploadserver/app/MainActivity.kt"
+touch "android/app/src/main/python/server_bridge.py"
+touch "android/app/src/main/res/drawable/ic_launcher_foreground.xml"
+touch "android/app/src/main/res/drawable/launch_background.xml"
+touch "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+touch "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+touch "android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+touch "android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+touch "android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+touch "android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+touch "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+touch "android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
+touch "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+touch "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+touch "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+touch "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+touch "android/app/src/main/res/values-night/styles.xml"
+touch "android/app/src/main/res/values/colors.xml"
+touch "android/app/src/main/res/values/strings.xml"
+touch "android/app/src/main/res/values/styles.xml"
+touch "android/app/src/main/res/xml/file_paths.xml"
+touch "android/build.gradle"
+touch "android/gradle.properties"
+touch "android/gradle/wrapper/gradle-wrapper.properties"
+touch "android/settings.gradle"
+touch "lib/app.dart"
+touch "lib/main.dart"
+touch "lib/models/settings_model.dart"
+touch "lib/screens/file_browser_screen.dart"
+touch "lib/screens/home_screen.dart"
+touch "lib/screens/settings_screen.dart"
+touch "lib/screens/update_dialog.dart"
+touch "lib/services/foreground_service.dart"
+touch "lib/services/server_service.dart"
+touch "lib/services/update_service.dart"
+touch "pubspec.yaml"
+
+# Contents:
+
+# "android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+# ```Noidentifier
+cat <<'1_0__XKZQW__1_0' > /dev/null
+[binary file - not displayed]
+1_0__XKZQW__1_0
+
+# "android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+# ```Noidentifier
+cat <<'1_0__XKZWQ__1_0' > /dev/null
+[binary file - not displayed]
+1_0__XKZWQ__1_0
+
+# "android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+# ```Noidentifier
+cat <<'1_0__XKQZW__1_0' > /dev/null
+[binary file - not displayed]
+1_0__XKQZW__1_0
+
+# "android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+# ```Noidentifier
+cat <<'1_0__XKQWZ__1_0' > /dev/null
+[binary file - not displayed]
+1_0__XKQWZ__1_0
+
+# "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+# ```Noidentifier
+cat <<'1_0__XKWZQ__1_0' > /dev/null
+[binary file - not displayed]
+1_0__XKWZQ__1_0
+
+# "android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
+# ```Noidentifier
+cat <<'1_0__XKWQZ__1_0' > /dev/null
+[binary file - not displayed]
+1_0__XKWQZ__1_0
+
+# "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+# ```Noidentifier
+cat <<'1_0__XZKQW__1_0' > /dev/null
+[binary file - not displayed]
+1_0__XZKQW__1_0
+
+# "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+# ```Noidentifier
+cat <<'1_0__XZKWQ__1_0' > /dev/null
+[binary file - not displayed]
+1_0__XZKWQ__1_0
+
+# "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+# ```Noidentifier
+cat <<'1_0__XZQKW__1_0' > /dev/null
+[binary file - not displayed]
+1_0__XZQKW__1_0
+
+# "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+# ```Noidentifier
+cat <<'1_0__XZQWK__1_0' > /dev/null
+[binary file - not displayed]
+1_0__XZQWK__1_0
+
+# ```Noidentifier
+cat <<'1_0__XZWKQ__1_0' > ".github/.nomedia"
+1_0__XZWKQ__1_0
+
+# ```Noidentifier
+cat <<'1_0__XZWQK__1_0' > ".github/workflows/.nomedia"
+1_0__XZWQK__1_0
+
+# ```yaml
+cat <<'1_0__XQKZW__1_0' > ".github/workflows/build.yml"
+name: Build NetShelfy+ APK
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build APK Universal
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Verify Python (required by Chaquopy)
+        run: python3 --version
+
+      - name: Setup Flutter (stable)
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Flutter version
+        run: flutter --version
+
+      - name: Create local.properties
+        run: echo "flutter.sdk=$FLUTTER_ROOT" > android/local.properties
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze (non-fatal)
+        run: flutter analyze --no-fatal-infos || true
+
+      - name: Build APK Release (Universal)
+        run: flutter build apk --release
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: netshelfy-release
+          path: build/app/outputs/flutter-apk/app-release.apk
+          retention-days: 30
+1_0__XQKZW__1_0
+
+# ```yaml
+cat <<'1_0__XQKWZ__1_0' > ".github/workflows/release.yml"
+name: Release NetShelfy+ APK
+
+# Trigger: push tag dengan format v1.0.0 atau v1.0.0+2
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    name: Build & Release APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Verify Python
+        run: python3 --version
+
+      - name: Setup Flutter (stable)
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Create local.properties
+        run: echo "flutter.sdk=$FLUTTER_ROOT" > android/local.properties
+
+      # Update versionName + versionCode di pubspec.yaml dari tag
+      # Tag format: v1.2.0 → version: 1.2.0+{github_run_number}
+      - name: Set version from tag
+        run: |
+          TAG="${GITHUB_REF_NAME}"            # misal v1.2.0
+          VERSION="${TAG#v}"                  # misal 1.2.0
+          BUILD="${GITHUB_RUN_NUMBER}"        # auto increment
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "BUILD=$BUILD"     >> $GITHUB_ENV
+          # Update pubspec.yaml
+          sed -i "s/^version:.*/version: $VERSION+$BUILD/" pubspec.yaml
+          echo "pubspec version updated: $VERSION+$BUILD"
+          cat pubspec.yaml | grep "^version:"
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze (non-fatal)
+        run: flutter analyze --no-fatal-infos || true
+
+      - name: Build APK Release
+        run: flutter build apk --release
+
+      # Buat GitHub Release dan upload APK
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: "NetShelfy+ ${{ env.VERSION }}"
+          body: |
+            ## NetShelfy+ ${{ env.VERSION }} (build ${{ env.BUILD }})
+
+            ### Cara Install
+            1. Download `app-release.apk` di bawah
+            2. Install di HP Android
+            3. Atau buka app → notif update otomatis muncul
+
+            ### Changelog
+            **♻️ Changes**
+            - Project renamed from UploadServer to Netshelfy
+            - Package ID changed: `com.uploadserver.app` → `com.twos.netshelfy.verseapp`
+
+            **🚀 New**
+            - Added `foreground_service.dart` — server now runs persistently
+              in the background via `flutter_foreground_task`
+            - Added `ic_launcher_foreground.png` assets across all mipmap
+              densities (hdpi / mdpi / xhdpi / xxhdpi / xxxhdpi)
+
+            **🔧 Updated**
+            - `pubspec.yaml`: added `flutter_foreground_task ^8.0.1`
+            - `LICENSE`: added `flutter_foreground_task` as acknowledged
+              third-party component
+          files: build/app/outputs/flutter-apk/app-release.apk
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+1_0__XQKWZ__1_0
+
+# ```Noidentifier
+cat <<'1_0__XQZKW__1_0' > ".gitignore"
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+*.iml
+*.ipr
+*.iws
+.idea/
+.DS_Store
+
+# Android
+local.properties
+android/.gradle/
+android/captures/
+**/GeneratedPluginRegistrant.java
+1_0__XQZKW__1_0
+
+# ```Noidentifier
+cat <<'1_0__XQZWK__1_0' > ".metadata"
+version:
+  revision: "stable"
+  channel: "stable"
+
+project_type: app
+1_0__XQZWK__1_0
+
+# ```Noidentifier
+cat <<'1_0__XQWKZ__1_0' > ".nomedia"
+1_0__XQWKZ__1_0
+
+# ```Noidentifier
+cat <<'1_0__XQWZK__1_0' > "LICENSE"
+MIT License
+
+Copyright (c) 2026 cloudy-claude
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+This project includes the following third-party components:
+
+- Flutter (https://flutter.dev) — BSD 3-Clause License
+- Chaquopy Python SDK (https://chaquo.com/chaquopy) — MIT License
+- permission_handler — MIT License
+- shared_preferences — BSD 3-Clause License
+- package_info_plus — MIT License
+- flutter_foreground_task — MIT License
+
+Each component retains its own license terms. See their respective
+repositories for full license text.
+1_0__XQWZK__1_0
+
+# ```markdown
+cat <<'1_0__XWKZQ__1_0' > "README.md"
+# NetShelfy+
+
+Aplikasi Flutter — jalankan `uploadserver` (Python) di Android **tanpa Termux**.
+
+Python 3.11 + `uploadserver` di-bundle ke APK via **Chaquopy**.
+
+## Cara Build (100% GitHub Actions)
+
+1. Upload semua file ini ke repo GitHub
+2. Buka tab **Actions** → tunggu workflow selesai (~10–15 menit)
+3. Download APK dari **Artifacts → netshelfy-release**
+
+## Fitur
+
+- Start / Pause / Resume / Stop server
+- Pilih folder yang di-serve (Internal, SD Card, USB, System)
+- Port kustom (default 8000)
+- Tema: Terang / Gelap / Sistem
+- Basic Auth (download & upload)
+- Basic Auth Upload Only
+- Preview command sebelum start
+
+## Arsitektur
+
+```
+Flutter (Dart) → MethodChannel → Kotlin → Chaquopy → Python 3.11
+                                                          └── uploadserver (pip, bundled)
+```
+
+## minSdk
+
+Android 7.0 (API 24)
+1_0__XWKZQ__1_0
+
+# ```yaml
+cat <<'1_0__XWKQZ__1_0' > "analysis_options.yaml"
+include: package:flutter_lints/flutter.yaml
+1_0__XWKQZ__1_0
+
+# ```Noidentifier
+cat <<'1_0__XWZKQ__1_0' > "android/.nomedia"
+1_0__XWZKQ__1_0
+
+# ```Noidentifier
+cat <<'1_0__XWZQK__1_0' > "android/app/.nomedia"
+1_0__XWZQK__1_0
+
+# ```groovy
+cat <<'1_0__XWQKZ__1_0' > "android/app/build.gradle"
+plugins {
+    id "com.android.application"
+    id "dev.flutter.flutter-gradle-plugin"
+    id "org.jetbrains.kotlin.android"
+}
+
+apply plugin: 'com.chaquo.python'
+
+android {
+    namespace "com.twos.netshelfy.verseapp"
+    compileSdk flutter.compileSdkVersion
+    ndkVersion flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11
+    }
+
+    defaultConfig {
+        applicationId "com.twos.netshelfy.verseapp"
+        minSdk 24
+        targetSdk flutter.targetSdkVersion
+        versionCode flutter.versionCode
+        versionName flutter.versionName
+
+        ndk {
+            abiFilters "arm64-v8a", "armeabi-v7a", "x86_64", "x86"
+        }
+
+        python {
+            pip {
+                install "uploadserver"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+}
+
+chaquopy {
+    defaultConfig {
+        version "3.11"
+    }
+}
+
+flutter {
+    source "../.."
+}
+1_0__XWQKZ__1_0
+
+# ```Noidentifier
+cat <<'1_0__XWQZK__1_0' > "android/app/proguard-rules.pro"
+-keep class io.flutter.** { *; }
+-keep class io.flutter.plugins.** { *; }
+-keep class com.chaquo.** { *; }
+-dontwarn io.flutter.embedding.**
+1_0__XWQZK__1_0
+
+# ```Noidentifier
+cat <<'1_0__KXZQW__1_0' > "android/app/src/.nomedia"
+1_0__KXZQW__1_0
+
+# ```Noidentifier
+cat <<'1_0__KXZWQ__1_0' > "android/app/src/main/.nomedia"
+1_0__KXZWQ__1_0
+
+# ```xml
+cat <<'1_0__KXQZW__1_0' > "android/app/src/main/AndroidManifest.xml"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29"
+        tools:ignore="ScopedStorage"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+
+    <!-- Foreground service -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+        android:label="NetShelfy+"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher"
+        android:requestLegacyExternalStorage="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="io.flutter.embedding.android.NormalTheme"
+                android:resource="@style/NormalTheme"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- flutter_foreground_task service -->
+        <service
+            android:name="com.pravera.flutter_foreground_task.service.ForegroundService"
+            android:foregroundServiceType="dataSync"
+            android:stopWithTask="false"/>
+
+        <!-- FileProvider untuk share APK ke installer -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2"/>
+    </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:mimeType="application/vnd.android.package-archive"/>
+        </intent>
+    </queries>
+</manifest>
+1_0__KXQZW__1_0
+
+# ```Noidentifier
+cat <<'1_0__KXQWZ__1_0' > "android/app/src/main/kotlin/.nomedia"
+1_0__KXQWZ__1_0
+
+# ```Noidentifier
+cat <<'1_0__KXWZQ__1_0' > "android/app/src/main/kotlin/com/.nomedia"
+1_0__KXWZQ__1_0
+
+# ```Noidentifier
+cat <<'1_0__KXWQZ__1_0' > "android/app/src/main/kotlin/com/twos/.nomedia"
+1_0__KXWQZ__1_0
+
+# ```Noidentifier
+cat <<'1_0__KZXQW__1_0' > "android/app/src/main/kotlin/com/twos/netshelfy/.nomedia"
+1_0__KZXQW__1_0
+
+# ```Noidentifier
+cat <<'1_0__KZXWQ__1_0' > "android/app/src/main/kotlin/com/twos/netshelfy/verseapp/.nomedia"
+1_0__KZXWQ__1_0
+
+# ```kotlin
+cat <<'1_0__KZQXW__1_0' > "android/app/src/main/kotlin/com/twos/netshelfy/verseapp/MainActivity.kt"
+package com.twos.netshelfy.verseapp
+
+import android.content.Intent
+import android.net.Uri
+import androidx.core.content.FileProvider
+import com.chaquo.python.Python
+import com.chaquo.python.android.AndroidPlatform
+import com.pravera.flutter_foreground_task.service.ForegroundService
+import io.flutter.embedding.android.FlutterActivity
+import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.plugin.common.MethodChannel
+import java.io.File
+
+class MainActivity : FlutterActivity() {
+
+    private val SERVER_CHANNEL = "com.twos.netshelfy.verseapp/server"
+    private val UPDATE_CHANNEL = "com.twos.netshelfy.verseapp/update"
+
+    override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
+        super.configureFlutterEngine(flutterEngine)
+
+        if (!Python.isStarted()) {
+            Python.start(AndroidPlatform(this))
+        }
+
+        val py     = Python.getInstance()
+        val bridge = py.getModule("server_bridge")
+
+        // ── Server channel ───────────────────────────────────────────
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, SERVER_CHANNEL)
+            .setMethodCallHandler { call, result ->
+                try {
+                    when (call.method) {
+                        "start" -> {
+                            val dir         = call.argument<String>("directory")   ?: "/storage/emulated/0"
+                            val port        = call.argument<Int>("port")           ?: 8000
+                            val theme       = call.argument<String>("theme")       ?: "auto"
+                            val basicAuth   = call.argument<String>("basicAuth")   ?: ""
+                            val basicAuthUp = call.argument<String>("basicAuthUp") ?: ""
+                            val res = bridge.callAttr("start", dir, port, theme, basicAuth, basicAuthUp).toString()
+                            result.success(res)
+                        }
+                        "pause"     -> { bridge.callAttr("pause");     result.success(null) }
+                        "resume"    -> { bridge.callAttr("resume");    result.success(null) }
+                        "stop"      -> { bridge.callAttr("stop");      result.success(null) }
+                        "getStatus" -> { result.success(bridge.callAttr("get_status").toString()) }
+                        else        -> result.notImplemented()
+                    }
+                } catch (e: Exception) {
+                    result.error("BRIDGE_ERROR", e.message, null)
+                }
+            }
+
+        // ── Update channel ───────────────────────────────────────────
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, UPDATE_CHANNEL)
+            .setMethodCallHandler { call, result ->
+                try {
+                    when (call.method) {
+                        "installApk" -> {
+                            val path = call.argument<String>("path")
+                            if (path == null) {
+                                result.error("INVALID_ARG", "path is null", null)
+                                return@setMethodCallHandler
+                            }
+                            val file = File(path)
+                            if (!file.exists()) {
+                                result.error("FILE_NOT_FOUND", "APK not found: $path", null)
+                                return@setMethodCallHandler
+                            }
+                            val uri = FileProvider.getUriForFile(
+                                this,
+                                "${applicationContext.packageName}.fileprovider",
+                                file
+                            )
+                            val intent = Intent(Intent.ACTION_VIEW).apply {
+                                setDataAndType(uri, "application/vnd.android.package-archive")
+                                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                            }
+                            startActivity(intent)
+                            result.success(null)
+                        }
+                        else -> result.notImplemented()
+                    }
+                } catch (e: Exception) {
+                    result.error("UPDATE_ERROR", e.message, null)
+                }
+            }
+    }
+}
+1_0__KZQXW__1_0
+
+# ```Noidentifier
+cat <<'1_0__KZQWX__1_0' > "android/app/src/main/kotlin/com/uploadserver/.nomedia"
+1_0__KZQWX__1_0
+
+# ```Noidentifier
+cat <<'1_0__KZWXQ__1_0' > "android/app/src/main/kotlin/com/uploadserver/app/.nomedia"
+1_0__KZWXQ__1_0
+
+# ```kotlin
+cat <<'1_0__KZWQX__1_0' > "android/app/src/main/kotlin/com/uploadserver/app/MainActivity.kt"
+package com.uploadserver.app
+
+import android.content.Intent
+import android.net.Uri
+import androidx.core.content.FileProvider
+import com.chaquo.python.Python
+import com.chaquo.python.android.AndroidPlatform
+import io.flutter.embedding.android.FlutterActivity
+import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.plugin.common.MethodChannel
+import java.io.File
+
+class MainActivity : FlutterActivity() {
+
+    private val SERVER_CHANNEL = "com.uploadserver.app/server"
+    private val UPDATE_CHANNEL = "com.uploadserver.app/update"
+
+    override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
+        super.configureFlutterEngine(flutterEngine)
+
+        // ── Chaquopy init ────────────────────────────────────────────
+        if (!Python.isStarted()) {
+            Python.start(AndroidPlatform(this))
+        }
+
+        val py     = Python.getInstance()
+        val bridge = py.getModule("server_bridge")
+
+        // ── Server channel ───────────────────────────────────────────
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, SERVER_CHANNEL)
+            .setMethodCallHandler { call, result ->
+                try {
+                    when (call.method) {
+                        "start" -> {
+                            val dir         = call.argument<String>("directory")   ?: "/storage/emulated/0"
+                            val port        = call.argument<Int>("port")           ?: 8000
+                            val theme       = call.argument<String>("theme")       ?: "auto"
+                            val basicAuth   = call.argument<String>("basicAuth")   ?: ""
+                            val basicAuthUp = call.argument<String>("basicAuthUp") ?: ""
+                            val res = bridge.callAttr("start", dir, port, theme, basicAuth, basicAuthUp).toString()
+                            result.success(res)
+                        }
+                        "pause"     -> { bridge.callAttr("pause");     result.success(null) }
+                        "resume"    -> { bridge.callAttr("resume");    result.success(null) }
+                        "stop"      -> { bridge.callAttr("stop");      result.success(null) }
+                        "getStatus" -> { result.success(bridge.callAttr("get_status").toString()) }
+                        else        -> result.notImplemented()
+                    }
+                } catch (e: Exception) {
+                    result.error("BRIDGE_ERROR", e.message, null)
+                }
+            }
+
+        // ── Update channel ───────────────────────────────────────────
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, UPDATE_CHANNEL)
+            .setMethodCallHandler { call, result ->
+                try {
+                    when (call.method) {
+                        "installApk" -> {
+                            val path = call.argument<String>("path")
+                            if (path == null) {
+                                result.error("INVALID_ARG", "path is null", null)
+                                return@setMethodCallHandler
+                            }
+                            val file = File(path)
+                            if (!file.exists()) {
+                                result.error("FILE_NOT_FOUND", "APK file not found: $path", null)
+                                return@setMethodCallHandler
+                            }
+                            val uri = FileProvider.getUriForFile(
+                                this,
+                                "${applicationContext.packageName}.fileprovider",
+                                file
+                            )
+                            val intent = Intent(Intent.ACTION_VIEW).apply {
+                                setDataAndType(uri, "application/vnd.android.package-archive")
+                                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                            }
+                            startActivity(intent)
+                            result.success(null)
+                        }
+                        else -> result.notImplemented()
+                    }
+                } catch (e: Exception) {
+                    result.error("UPDATE_ERROR", e.message, null)
+                }
+            }
+    }
+}
+1_0__KZWQX__1_0
+
+# ```Noidentifier
+cat <<'1_0__KQXZW__1_0' > "android/app/src/main/python/.nomedia"
+1_0__KQXZW__1_0
+
+# ```python
+cat <<'1_0__KQXWZ__1_0' > "android/app/src/main/python/server_bridge.py"
+"""
+server_bridge.py — Chaquopy bridge untuk uploadserver.
+
+start(directory, port, theme, basic_auth, basic_auth_upload)
+"""
+
+import os
+import threading
+import http.server
+import inspect
+import base64
+
+_server      = None
+_pause_event = threading.Event()
+_pause_event.set()
+_lock        = threading.Lock()
+
+
+def _find_handler_class():
+    import uploadserver
+    for candidate in ("UploadHTTPRequestHandler", "SimpleHTTPRequestHandler",
+                      "Handler", "HTTPRequestHandler"):
+        cls = getattr(uploadserver, candidate, None)
+        if cls and isinstance(cls, type):
+            if issubclass(cls, http.server.BaseHTTPRequestHandler):
+                return cls
+    for _, obj in inspect.getmembers(uploadserver, inspect.isclass):
+        if (obj is not http.server.BaseHTTPRequestHandler and
+                issubclass(obj, http.server.BaseHTTPRequestHandler)):
+            return obj
+    try:
+        import importlib
+        m = importlib.import_module("uploadserver.__main__")
+        for _, obj in inspect.getmembers(m, inspect.isclass):
+            if (obj is not http.server.BaseHTTPRequestHandler and
+                    issubclass(obj, http.server.BaseHTTPRequestHandler)):
+                return obj
+    except Exception:
+        pass
+    return None
+
+
+def _make_auth_checker(user_pass_str):
+    if not user_pass_str or ':' not in user_pass_str:
+        return None
+    expected = base64.b64encode(user_pass_str.encode()).decode()
+    def check(auth_header):
+        if not auth_header:
+            return False
+        parts = auth_header.split(' ', 1)
+        if len(parts) != 2 or parts[0].lower() != 'basic':
+            return False
+        return parts[1] == expected
+    return check
+
+
+def start(directory, port=8000, theme="auto",
+          basic_auth="", basic_auth_upload=""):
+
+    global _server, _pause_event
+
+    with _lock:
+        if _server is not None:
+            return "already_running"
+
+        _pause_event.set()
+
+        BaseHandler = _find_handler_class()
+        if BaseHandler is None:
+            return "error: cannot find uploadserver handler class"
+
+        # Terapkan --theme ke modul uploadserver
+        try:
+            import uploadserver as _usmod
+            if hasattr(_usmod, 'theme'):
+                _usmod.theme = str(theme)
+            if hasattr(BaseHandler, 'theme'):
+                BaseHandler.theme = str(theme)
+        except Exception:
+            pass
+
+        # Pindah ke direktori yang dipilih user.
+        # Ini cara paling kompatibel — uploadserver v6 serve dari CWD.
+        try:
+            os.chdir(str(directory))
+        except Exception as e:
+            return f"error: cannot chdir to {directory}: {e}"
+
+        ev            = _pause_event
+        auth_check    = _make_auth_checker(basic_auth)
+        auth_up_check = _make_auth_checker(basic_auth_upload)
+
+        class PausableHandler(BaseHandler):
+            # Tidak override __init__ — biarkan uploadserver handle sendiri.
+            # Directory sudah di-set via os.chdir() di atas.
+
+            def handle(self):
+                ev.wait()
+                super().handle()
+
+            def do_HEAD(self):
+                if auth_check and not auth_check(self.headers.get('Authorization')):
+                    self._send_auth_required("Access"); return
+                super().do_HEAD()
+
+            def do_GET(self):
+                if auth_check and not auth_check(self.headers.get('Authorization')):
+                    self._send_auth_required("Access"); return
+                super().do_GET()
+
+            def do_POST(self):
+                checker = auth_check or auth_up_check
+                if checker and not checker(self.headers.get('Authorization')):
+                    self._send_auth_required("Upload"); return
+                super().do_POST()
+
+            def do_PUT(self):
+                checker = auth_check or auth_up_check
+                if checker and not checker(self.headers.get('Authorization')):
+                    self._send_auth_required("Upload"); return
+                super().do_PUT()
+
+            def _send_auth_required(self, realm="Access"):
+                self.send_response(401)
+                self.send_header('WWW-Authenticate', f'Basic realm="{realm}"')
+                self.send_header('Content-Type', 'text/plain')
+                self.send_header('Content-Length', '0')
+                self.end_headers()
+
+        try:
+            _server = http.server.HTTPServer(("0.0.0.0", int(port)), PausableHandler)
+            t = threading.Thread(target=_server.serve_forever, daemon=True)
+            t.start()
+            return "ok"
+        except OSError as e:
+            _server = None
+            return f"error: {e}"
+        except Exception as e:
+            _server = None
+            return f"error: {e}"
+
+
+def pause():
+    _pause_event.clear()
+    return "paused"
+
+def resume():
+    _pause_event.set()
+    return "resumed"
+
+def stop():
+    global _server
+    with _lock:
+        if _server is not None:
+            _pause_event.set()
+            try:
+                _server.shutdown()
+            except Exception:
+                pass
+            _server = None
+    return "stopped"
+
+def get_status():
+    if _server is None:
+        return "idle"
+    if not _pause_event.is_set():
+        return "paused"
+    return "active"
+1_0__KQXWZ__1_0
+
+# ```Noidentifier
+cat <<'1_0__KQZXW__1_0' > "android/app/src/main/res/.nomedia"
+1_0__KQZXW__1_0
+
+# ```Noidentifier
+cat <<'1_0__KQZWX__1_0' > "android/app/src/main/res/drawable/.nomedia"
+1_0__KQZWX__1_0
+
+# ```xml
+cat <<'1_0__KQWXZ__1_0' > "android/app/src/main/res/drawable/ic_launcher_foreground.xml"
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#1565C0"
+        android:pathData="M54,20 A34,34 0 1 1 54,88 A34,34 0 1 1 54,20z"/>
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M54,38 L42,55 L50,55 L50,70 L58,70 L58,55 L66,55 Z"/>
+</vector>
+1_0__KQWXZ__1_0
+
+# ```xml
+cat <<'1_0__KQWZX__1_0' > "android/app/src/main/res/drawable/launch_background.xml"
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/white"/>
+</layer-list>
+1_0__KQWZX__1_0
+
+# ```Noidentifier
+cat <<'1_0__KWXZQ__1_0' > "android/app/src/main/res/mipmap-anydpi-v26/.nomedia"
+1_0__KWXZQ__1_0
+
+# ```xml
+cat <<'1_0__KWXQZ__1_0' > "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@android:color/white"/>
+    <foreground android:drawable="@mipmap/ic_launcher_foreground"/>
+</adaptive-icon>
+1_0__KWXQZ__1_0
+
+# ```xml
+cat <<'1_0__KWZXQ__1_0' > "android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@android:color/white"/>
+    <foreground android:drawable="@mipmap/ic_launcher_foreground"/>
+</adaptive-icon>
+1_0__KWZXQ__1_0
+
+# ```Noidentifier
+cat <<'1_0__KWZQX__1_0' > "android/app/src/main/res/mipmap-hdpi/.nomedia"
+1_0__KWZQX__1_0
+
+# ```Noidentifier
+cat <<'1_0__KWQXZ__1_0' > "android/app/src/main/res/mipmap-mdpi/.nomedia"
+1_0__KWQXZ__1_0
+
+# ```Noidentifier
+cat <<'1_0__KWQZX__1_0' > "android/app/src/main/res/mipmap-xhdpi/.nomedia"
+1_0__KWQZX__1_0
+
+# ```Noidentifier
+cat <<'1_0__ZXKQW__1_0' > "android/app/src/main/res/mipmap-xxhdpi/.nomedia"
+1_0__ZXKQW__1_0
+
+# ```Noidentifier
+cat <<'1_0__ZXKWQ__1_0' > "android/app/src/main/res/mipmap-xxxhdpi/.nomedia"
+1_0__ZXKWQ__1_0
+
+# ```Noidentifier
+cat <<'1_0__ZXQKW__1_0' > "android/app/src/main/res/values-night/.nomedia"
+1_0__ZXQKW__1_0
+
+# ```xml
+cat <<'1_0__ZXQWK__1_0' > "android/app/src/main/res/values-night/styles.xml"
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+1_0__ZXQWK__1_0
+
+# ```Noidentifier
+cat <<'1_0__ZXWKQ__1_0' > "android/app/src/main/res/values/.nomedia"
+1_0__ZXWKQ__1_0
+
+# ```xml
+cat <<'1_0__ZXWQK__1_0' > "android/app/src/main/res/values/colors.xml"
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1565C0</color>
+    <color name="colorBackground">#FFFFFF</color>
+</resources>
+1_0__ZXWQK__1_0
+
+# ```xml
+cat <<'1_0__ZKXQW__1_0' > "android/app/src/main/res/values/strings.xml"
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NetShelfy+</string>
+</resources>
+1_0__ZKXQW__1_0
+
+# ```xml
+cat <<'1_0__ZKXWQ__1_0' > "android/app/src/main/res/values/styles.xml"
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>
+1_0__ZKXWQ__1_0
+
+# ```Noidentifier
+cat <<'1_0__ZKQXW__1_0' > "android/app/src/main/res/xml/.nomedia"
+1_0__ZKQXW__1_0
+
+# ```xml
+cat <<'1_0__ZKQWX__1_0' > "android/app/src/main/res/xml/file_paths.xml"
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path name="external_files" path="."/>
+    <root-path name="root" path="/"/>
+    <cache-path name="apk_cache" path="updates/"/>
+    <external-cache-path name="external_cache" path="."/>
+</paths>
+1_0__ZKQWX__1_0
+
+# ```groovy
+cat <<'1_0__ZKWXQ__1_0' > "android/build.gradle"
+// Buildscript classpath diperlukan oleh Chaquopy untuk menemukan AGP
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://chaquo.com/maven' }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.7.0"
+        classpath "com.chaquo.python:gradle:15.0.1"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://chaquo.com/maven' }
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+1_0__ZKWXQ__1_0
+
+# ```properties
+cat <<'1_0__ZKWQX__1_0' > "android/gradle.properties"
+org.gradle.jvmargs=-Xmx4G -XX:MaxMetaspaceSize=2G -XX:+HeapDumpOnOutOfMemoryError
+android.useAndroidX=true
+android.enableJetifier=true
+1_0__ZKWQX__1_0
+
+# ```Noidentifier
+cat <<'1_0__ZQXKW__1_0' > "android/gradle/.nomedia"
+1_0__ZQXKW__1_0
+
+# ```Noidentifier
+cat <<'1_0__ZQXWK__1_0' > "android/gradle/wrapper/.nomedia"
+1_0__ZQXWK__1_0
+
+# ```properties
+cat <<'1_0__ZQKXW__1_0' > "android/gradle/wrapper/gradle-wrapper.properties"
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.9-all.zip
+1_0__ZQKXW__1_0
+
+# ```groovy
+cat <<'1_0__ZQKWX__1_0' > "android/settings.gradle"
+pluginManagement {
+    def flutterSdkPath = {
+        def properties = new Properties()
+        file("local.properties").withInputStream { properties.load(it) }
+        def flutterSdkPath = properties.getProperty("flutter.sdk")
+        assert flutterSdkPath != null, "flutter.sdk not set in local.properties"
+        return flutterSdkPath
+    }()
+
+    includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
+
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url 'https://chaquo.com/maven' }
+    }
+}
+
+plugins {
+    id "dev.flutter.flutter-plugin-loader" version "1.0.0"
+    id "com.android.application" version "8.7.0" apply false
+    id "org.jetbrains.kotlin.android" version "2.1.0" apply false
+}
+
+include ":app"
+1_0__ZQKWX__1_0
+
+# ```Noidentifier
+cat <<'1_0__ZQWXK__1_0' > "assets/.nomedia"
+1_0__ZQWXK__1_0
+
+# ```Noidentifier
+cat <<'1_0__ZQWKX__1_0' > "docs/.nomedia"
+1_0__ZQWKX__1_0
+
+# ```Noidentifier
+cat <<'1_0__ZWXKQ__1_0' > "lib/.nomedia"
+1_0__ZWXKQ__1_0
+
+# ```dart
+cat <<'1_0__ZWXQK__1_0' > "lib/app.dart"
+import 'package:flutter/material.dart';
+import 'models/settings_model.dart';
+import 'screens/home_screen.dart';
+
+class App extends StatefulWidget {
+  final AppSettings initialSettings;
+  const App({super.key, required this.initialSettings});
+
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  late AppSettings _settings;
+
+  @override
+  void initState() {
+    super.initState();
+    _settings = widget.initialSettings;
+  }
+
+  void updateSettings(AppSettings s) {
+    setState(() => _settings = s);
+    s.save();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'NetShelfy+',
+      debugShowCheckedModeBanner: false,
+      themeMode: _settings.themeMode,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF1565C0),
+          brightness: Brightness.light,
+        ),
+        useMaterial3: true,
+      ),
+      darkTheme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF1565C0),
+          brightness: Brightness.dark,
+        ),
+        useMaterial3: true,
+      ),
+      home: HomeScreen(
+        settings: _settings,
+        onSettingsChanged: updateSettings,
+      ),
+    );
+  }
+}
+1_0__ZWXQK__1_0
+
+# ```dart
+cat <<'1_0__ZWKXQ__1_0' > "lib/main.dart"
+import 'package:flutter/material.dart';
+import 'app.dart';
+import 'models/settings_model.dart';
+import 'services/foreground_service.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  ForegroundSvc.init();  // inisialisasi foreground task
+  final settings = await AppSettings.load();
+  runApp(App(initialSettings: settings));
+}
+1_0__ZWKXQ__1_0
+
+# ```Noidentifier
+cat <<'1_0__ZWKQX__1_0' > "lib/models/.nomedia"
+1_0__ZWKQX__1_0
+
+# ```dart
+cat <<'1_0__ZWQXK__1_0' > "lib/models/settings_model.dart"
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+class AppSettings {
+  final int port;
+  final ThemeMode themeMode;
+  final String basicAuth;
+  final String basicAuthUpload;
+  final bool keepAlive;  // tetap aktif di background
+
+  const AppSettings({
+    this.port = 8000,
+    this.themeMode = ThemeMode.system,
+    this.basicAuth = '',
+    this.basicAuthUpload = '',
+    this.keepAlive = false,
+  });
+
+  String get themeArg {
+    switch (themeMode) {
+      case ThemeMode.light:  return 'light';
+      case ThemeMode.dark:   return 'dark';
+      case ThemeMode.system: return 'auto';
+    }
+  }
+
+  String buildCommand(String directory) {
+    final parts = <String>[
+      'python -m uploadserver',
+      '--bind 0.0.0.0',
+      '--directory $directory',
+      '--theme $themeArg',
+    ];
+    if (basicAuth.isNotEmpty) parts.add('--basic-auth $basicAuth');
+    if (basicAuthUpload.isNotEmpty) parts.add('--basic-auth-upload $basicAuthUpload');
+    parts.add('$port');
+    return parts.join(' ');
+  }
+
+  static const _kPort      = 'port';
+  static const _kTheme     = 'theme';
+  static const _kAuth      = 'basic_auth';
+  static const _kAuthUp    = 'basic_auth_upload';
+  static const _kKeepAlive = 'keep_alive';
+
+  static Future<AppSettings> load() async {
+    final prefs = await SharedPreferences.getInstance();
+    return AppSettings(
+      port:            prefs.getInt(_kPort)    ?? 8000,
+      themeMode:       _themeFromStr(prefs.getString(_kTheme) ?? 'system'),
+      basicAuth:       prefs.getString(_kAuth)    ?? '',
+      basicAuthUpload: prefs.getString(_kAuthUp)  ?? '',
+      keepAlive:       prefs.getBool(_kKeepAlive) ?? false,
+    );
+  }
+
+  Future<void> save() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt(_kPort, port);
+    await prefs.setString(_kTheme, _themeToStr(themeMode));
+    await prefs.setString(_kAuth, basicAuth);
+    await prefs.setString(_kAuthUp, basicAuthUpload);
+    await prefs.setBool(_kKeepAlive, keepAlive);
+  }
+
+  AppSettings copyWith({
+    int? port,
+    ThemeMode? themeMode,
+    String? basicAuth,
+    String? basicAuthUpload,
+    bool? keepAlive,
+  }) {
+    return AppSettings(
+      port:            port            ?? this.port,
+      themeMode:       themeMode       ?? this.themeMode,
+      basicAuth:       basicAuth       ?? this.basicAuth,
+      basicAuthUpload: basicAuthUpload ?? this.basicAuthUpload,
+      keepAlive:       keepAlive       ?? this.keepAlive,
+    );
+  }
+
+  static ThemeMode _themeFromStr(String s) {
+    switch (s) {
+      case 'light': return ThemeMode.light;
+      case 'dark':  return ThemeMode.dark;
+      default:      return ThemeMode.system;
+    }
+  }
+
+  static String _themeToStr(ThemeMode m) {
+    switch (m) {
+      case ThemeMode.light:  return 'light';
+      case ThemeMode.dark:   return 'dark';
+      case ThemeMode.system: return 'system';
+    }
+  }
+}
+1_0__ZWQXK__1_0
+
+# ```Noidentifier
+cat <<'1_0__ZWQKX__1_0' > "lib/screens/.nomedia"
+1_0__ZWQKX__1_0
+
+# ```dart
+cat <<'1_0__QXKZW__1_0' > "lib/screens/file_browser_screen.dart"
+import 'dart:io';
+import 'package:flutter/material.dart';
+
+class _StorageTab {
+  final String label;
+  final IconData icon;
+  final String root;
+  const _StorageTab({required this.label, required this.icon, required this.root});
+}
+
+// Deteksi path USB/OTG yang sebenarnya di runtime
+List<String> _findUsbPaths() {
+  final candidates = <String>[];
+
+  // Scan /storage/ — folder selain 'emulated' dan 'self' kemungkinan USB/SD
+  try {
+    final storageDir = Directory('/storage');
+    if (storageDir.existsSync()) {
+      for (final entry in storageDir.listSync().whereType<Directory>()) {
+        final name = entry.path.split('/').last;
+        if (name != 'emulated' && name != 'self') {
+          candidates.add(entry.path);
+        }
+      }
+    }
+  } catch (_) {}
+
+  // Tambah path umum lainnya sebagai fallback
+  for (final p in [
+    '/mnt/media_rw',
+    '/mnt/usb_storage',
+    '/mnt/usbdisk',
+  ]) {
+    try {
+      final d = Directory(p);
+      if (d.existsSync()) {
+        // Kalau isinya ada folder, tambah subfolder-nya
+        final subs = d.listSync().whereType<Directory>().toList();
+        if (subs.isNotEmpty) {
+          for (final s in subs) candidates.add(s.path);
+        } else {
+          candidates.add(p);
+        }
+      }
+    } catch (_) {}
+  }
+
+  // Hilangkan duplikat
+  final seen = <String>{};
+  return candidates.where((p) => seen.add(p)).toList();
+}
+
+class FileBrowserScreen extends StatefulWidget {
+  const FileBrowserScreen({super.key});
+
+  @override
+  State<FileBrowserScreen> createState() => _FileBrowserScreenState();
+}
+
+class _FileBrowserScreenState extends State<FileBrowserScreen>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabCtrl;
+  late List<_StorageTab> _tabs;
+
+  final Map<int, String>       _paths   = {};
+  final Map<int, List<String>> _history = {};
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Deteksi USB/OTG secara dinamis
+    final usbPaths = _findUsbPaths();
+    final usbTabs  = usbPaths.isNotEmpty
+        ? usbPaths.map((p) => _StorageTab(
+              label: p.split('/').last,
+              icon:  Icons.usb_rounded,
+              root:  p,
+            )).toList()
+        : [const _StorageTab(
+              label: 'USB Storage',
+              icon:  Icons.usb_rounded,
+              root:  '/storage/usbdisk',
+            )];
+
+    _tabs = [
+      const _StorageTab(label: 'Internal',    icon: Icons.phone_android_rounded, root: '/storage/emulated/0'),
+      const _StorageTab(label: 'Memory Card', icon: Icons.sd_card_rounded,       root: '/storage/sdcard1'),
+      ...usbTabs,
+      const _StorageTab(label: 'System',      icon: Icons.folder_special_rounded, root: '/'),
+    ];
+
+    _tabCtrl = TabController(length: _tabs.length, vsync: this)
+      ..addListener(() { if (!_tabCtrl.indexIsChanging) setState(() {}); });
+    for (int i = 0; i < _tabs.length; i++) {
+      _paths[i]   = _tabs[i].root;
+      _history[i] = [];
+    }
+  }
+
+  @override
+  void dispose() { _tabCtrl.dispose(); super.dispose(); }
+
+  int    get _idx         => _tabCtrl.index;
+  String get _currentPath => _paths[_idx] ?? _tabs[_idx].root;
+  bool   get _canGoBack   => (_history[_idx]?.isNotEmpty) ?? false;
+
+  void _navigate(int tabIdx, String path) {
+    setState(() { _history[tabIdx]!.add(_paths[tabIdx]!); _paths[tabIdx] = path; });
+  }
+
+  void _goBack() {
+    if (!_canGoBack) return;
+    setState(() => _paths[_idx] = _history[_idx]!.removeLast());
+  }
+
+  List<Directory> _listDirs(String path) {
+    try {
+      return Directory(path).listSync().whereType<Directory>()
+          .where((d) => !d.path.split('/').last.startsWith('.')).toList()
+        ..sort((a, b) => a.path.split('/').last.toLowerCase()
+            .compareTo(b.path.split('/').last.toLowerCase()));
+    } catch (_) { return []; }
+  }
+
+  bool _pathExists(String p) {
+    try { return Directory(p).existsSync(); } catch (_) { return false; }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Pilih Folder', style: TextStyle(fontWeight: FontWeight.bold)),
+        centerTitle: true,
+        bottom: TabBar(
+          controller: _tabCtrl, isScrollable: true, tabAlignment: TabAlignment.start,
+          tabs: _tabs.map((t) =>
+              Tab(icon: Icon(t.icon, size: 18), text: t.label, height: 56)).toList(),
+        ),
+      ),
+      body: TabBarView(controller: _tabCtrl, children: List.generate(_tabs.length, _buildTab)),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () => Navigator.pop(context, _currentPath),
+        icon: const Icon(Icons.check_rounded),
+        label: const Text('Pilih Folder Ini', style: TextStyle(fontWeight: FontWeight.bold)),
+      ),
+    );
+  }
+
+  Widget _buildTab(int tabIdx) {
+    return Builder(builder: (context) {
+      final path     = _paths[tabIdx] ?? _tabs[tabIdx].root;
+      final isActive = _tabCtrl.index == tabIdx;
+      if (!_pathExists(path)) return _buildUnavailable(_tabs[tabIdx].label);
+      final dirs = _listDirs(path);
+      return Column(children: [
+        Material(
+          color: Theme.of(context).colorScheme.surfaceVariant.withOpacity(0.4),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+            child: Row(children: [
+              IconButton(
+                icon: Icon(Icons.arrow_back_ios_rounded, size: 18,
+                    color: (isActive && _canGoBack)
+                        ? Theme.of(context).colorScheme.onSurface
+                        : Colors.grey.shade400),
+                onPressed: (isActive && _canGoBack) ? _goBack : null,
+                padding: const EdgeInsets.all(6), constraints: const BoxConstraints()),
+              const SizedBox(width: 4),
+              const Icon(Icons.folder_open_rounded, size: 16, color: Colors.amber),
+              const SizedBox(width: 6),
+              Expanded(child: Text(path,
+                  style: TextStyle(fontSize: 12, color: Colors.grey.shade600, fontFamily: 'monospace'),
+                  overflow: TextOverflow.ellipsis)),
+            ]),
+          ),
+        ),
+        Expanded(
+          child: dirs.isEmpty ? _buildEmpty()
+              : ListView.separated(
+                  itemCount: dirs.length,
+                  separatorBuilder: (_, __) => const Divider(height: 1, indent: 56),
+                  itemBuilder: (ctx, i) {
+                    final name = dirs[i].path.split('/').last;
+                    return ListTile(
+                      leading: const Icon(Icons.folder_rounded, color: Colors.amber, size: 30),
+                      title: Text(name, style: const TextStyle(fontSize: 14), overflow: TextOverflow.ellipsis),
+                      trailing: const Icon(Icons.chevron_right_rounded, size: 20),
+                      onTap: () => _navigate(tabIdx, dirs[i].path),
+                      dense: true,
+                    );
+                  }),
+        ),
+      ]);
+    });
+  }
+
+  Widget _buildUnavailable(String label) => Center(child: Padding(
+    padding: const EdgeInsets.all(32),
+    child: Column(mainAxisSize: MainAxisSize.min, children: [
+      Icon(Icons.storage_rounded, size: 64, color: Colors.grey.shade300),
+      const SizedBox(height: 16),
+      Text('$label tidak tersedia',
+          style: TextStyle(fontSize: 16, color: Colors.grey.shade500, fontWeight: FontWeight.w500)),
+      const SizedBox(height: 8),
+      Text('Storage tidak terpasang\natau tidak dapat diakses',
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 13, color: Colors.grey.shade400)),
+    ]),
+  ));
+
+  Widget _buildEmpty() => Center(child: Padding(
+    padding: const EdgeInsets.all(32),
+    child: Column(mainAxisSize: MainAxisSize.min, children: [
+      Icon(Icons.folder_off_rounded, size: 56, color: Colors.grey.shade300),
+      const SizedBox(height: 12),
+      Text('Folder kosong', style: TextStyle(color: Colors.grey.shade500)),
+    ]),
+  ));
+}
+1_0__QXKZW__1_0
+
+# ```dart
+cat <<'1_0__QXKWZ__1_0' > "lib/screens/home_screen.dart"
+import 'dart:convert';
+import 'dart:io';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_foreground_task/flutter_foreground_task.dart';
+import 'package:permission_handler/permission_handler.dart';
+import '../models/settings_model.dart';
+import '../services/server_service.dart';
+import '../services/update_service.dart';
+import '../services/foreground_service.dart';
+import 'file_browser_screen.dart';
+import 'settings_screen.dart';
+import 'update_dialog.dart';
+
+class HomeScreen extends StatefulWidget {
+  final AppSettings settings;
+  final ValueChanged<AppSettings> onSettingsChanged;
+  const HomeScreen({super.key, required this.settings, required this.onSettingsChanged});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
+  final _service = ServerService();
+  String _selectedFolder = '/storage/emulated/0';
+
+  // 3 tipe IP
+  final String _loopbackIp = '127.0.0.1';
+  String? _privateIp;
+  String? _publicIp;
+  bool _fetchingIp = false;
+  bool _ipExpanded = false;  // dropdown state
+
+  late AnimationController _pulseCtrl;
+  late Animation<double> _pulseAnim;
+
+  AppSettings get _settings => widget.settings;
+
+  @override
+  void initState() {
+    super.initState();
+    _pulseCtrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 1200))
+      ..repeat(reverse: true);
+    _pulseAnim = Tween(begin: 1.0, end: 1.06).animate(
+      CurvedAnimation(parent: _pulseCtrl, curve: Curves.easeInOut));
+    _requestPermissions();
+    Future.delayed(const Duration(seconds: 2), _checkForUpdate);
+    // Dengarkan event dari foreground service (tombol Stop di notifikasi)
+    FlutterForegroundTask.addTaskDataCallback(_onForegroundData);
+  }
+
+  void _onForegroundData(Object data) {
+    if (data is Map && data['action'] == 'stop') {
+      _service.stop();
+      ForegroundSvc.stop();
+      if (mounted) {
+        setState(() {
+          _privateIp  = null;
+          _publicIp   = null;
+          _fetchingIp = false;
+          _ipExpanded = false;
+        });
+      }
+    }
+  }
+
+  @override
+  void dispose() {
+    FlutterForegroundTask.removeTaskDataCallback(_onForegroundData);
+    _pulseCtrl.dispose();
+    _service.dispose();
+    super.dispose();
+  }
+
+  Future<void> _requestPermissions() async {
+    if (Platform.isAndroid) {
+      await Permission.storage.request();
+      if (await Permission.manageExternalStorage.isDenied) {
+        await Permission.manageExternalStorage.request();
+      }
+      // Notifikasi untuk foreground service (Android 13+)
+      await ForegroundSvc.requestPermission();
+    }
+  }
+
+  Future<void> _checkForUpdate() async {
+    if (!mounted) return;
+    final info = await UpdateService.checkForUpdate();
+    if (!mounted || info == null) return;
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => UpdateDialog(info: info),
+    );
+  }
+
+  // ── IP Private (LAN/WiFi) ─────────────────────────────────────
+  Future<String?> _getPrivateIp() async {
+    try {
+      final interfaces = await NetworkInterface.list(
+        type: InternetAddressType.IPv4,
+        includeLinkLocal: false,
+      );
+      // Prioritas WiFi
+      for (final iface in interfaces) {
+        final name = iface.name.toLowerCase();
+        if (name.contains('wlan') || name.contains('wifi') || name.contains('wl')) {
+          for (final addr in iface.addresses) {
+            if (!addr.isLoopback) return addr.address;
+          }
+        }
+      }
+      // Fallback: interface pertama bukan loopback
+      for (final iface in interfaces) {
+        for (final addr in iface.addresses) {
+          if (!addr.isLoopback) return addr.address;
+        }
+      }
+    } catch (_) {}
+    return null;
+  }
+
+  // ── IP Public (fetch dari service eksternal) ──────────────────
+  Future<String?> _getPublicIp() async {
+    final services = [
+      'https://api.ipify.org',
+      'https://icanhazip.com',
+      'https://ipecho.net/plain',
+    ];
+    for (final url in services) {
+      try {
+        final client = HttpClient();
+        client.connectionTimeout = const Duration(seconds: 5);
+        final req  = await client.getUrl(Uri.parse(url));
+        final resp = await req.close();
+        final body = await resp.transform(const SystemEncoding().decoder).join();
+        client.close();
+        final ip = body.trim();
+        // Validasi format IP
+        if (RegExp(r'^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$').hasMatch(ip)) {
+          return ip;
+        }
+      } catch (_) {}
+    }
+    return null;
+  }
+
+  Future<void> _fetchAllIps() async {
+    setState(() => _fetchingIp = true);
+    final results = await Future.wait([_getPrivateIp(), _getPublicIp()]);
+    if (mounted) {
+      setState(() {
+        _privateIp  = results[0];
+        _publicIp   = results[1];
+        _fetchingIp = false;
+      });
+    }
+  }
+
+  Future<void> _onMainButton() async {
+    final state = _service.state;
+    if (state == ServerState.idle) {
+      _showStarting();
+      final err = await _service.start(_selectedFolder, _settings);
+      if (!mounted) return;
+      Navigator.of(context).pop();
+      if (err != null) {
+        _showError(err);
+      } else {
+        _fetchAllIps();
+        // Start foreground service jika keepAlive aktif
+        if (_settings.keepAlive) {
+          await ForegroundSvc.start(
+            directory: _selectedFolder,
+            port: _settings.port,
+          );
+        }
+      }
+    } else {
+      _showControlSheet(state);
+    }
+  }
+
+  void _showStarting() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => const AlertDialog(
+        content: Row(children: [
+          CircularProgressIndicator(),
+          SizedBox(width: 16),
+          Expanded(child: Text('Memulai server...\n(pertama kali mungkin lebih lama)')),
+        ]),
+      ),
+    );
+  }
+
+  void _showError(String msg) {
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: const Row(children: [
+          Icon(Icons.error_outline, color: Colors.red), SizedBox(width: 8), Text('Gagal'),
+        ]),
+        content: SingleChildScrollView(
+          child: Text(msg, style: const TextStyle(fontFamily: 'monospace', fontSize: 13))),
+        actions: [TextButton(onPressed: () => Navigator.pop(context), child: const Text('OK'))],
+      ),
+    );
+  }
+
+  void _showControlSheet(ServerState state) {
+    showModalBottomSheet(
+      context: context,
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      builder: (ctx) {
+        final isActive = state == ServerState.active;
+        return SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            child: Column(mainAxisSize: MainAxisSize.min, children: [
+              Container(
+                width: 40, height: 4,
+                margin: const EdgeInsets.only(bottom: 12),
+                decoration: BoxDecoration(color: Colors.grey.shade300, borderRadius: BorderRadius.circular(2)),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                child: Row(children: [
+                  Container(
+                    width: 8, height: 8,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: isActive ? Colors.green : Colors.orange),
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    isActive ? 'Server Aktif' : 'Server Dijeda',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: isActive ? Colors.green : Colors.orange),
+                  ),
+                ]),
+              ),
+              const Divider(),
+              ListTile(
+                leading: Icon(
+                  isActive ? Icons.pause_circle_outline : Icons.play_circle_outline,
+                  size: 28, color: isActive ? Colors.orange : Colors.green),
+                title: Text(isActive ? 'Pause' : 'Resume',
+                  style: TextStyle(fontWeight: FontWeight.w500, color: isActive ? Colors.orange : Colors.green)),
+                subtitle: Text(
+                  isActive ? 'Jeda sementara — koneksi baru ditahan' : 'Lanjutkan server',
+                  style: const TextStyle(fontSize: 12)),
+                onTap: () {
+                  Navigator.pop(ctx);
+                  if (isActive) _service.pause(); else _service.resume();
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.stop_circle_outlined, size: 28, color: Colors.red),
+                title: const Text('Stop', style: TextStyle(fontWeight: FontWeight.w500, color: Colors.red)),
+                subtitle: const Text('Hentikan server sepenuhnya', style: TextStyle(fontSize: 12)),
+                onTap: () {
+                  Navigator.pop(ctx);
+                  _service.stop();
+                  ForegroundSvc.stop();
+                  setState(() {
+                    _privateIp  = null;
+                    _publicIp   = null;
+                    _fetchingIp = false;
+                    _ipExpanded = false;
+                  });
+                },
+              ),
+              const SizedBox(height: 8),
+            ]),
+          ),
+        );
+      },
+    );
+  }
+
+  Future<void> _pickFolder() async {
+    final result = await Navigator.push<String>(
+      context, MaterialPageRoute(builder: (_) => const FileBrowserScreen()));
+    if (result != null && mounted) setState(() => _selectedFolder = result);
+  }
+
+  Future<void> _openSettings() async {
+    await Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => SettingsScreen(
+        settings: _settings,
+        onChanged: widget.onSettingsChanged,
+        selectedFolder: _selectedFolder,
+      )));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder<ServerState>(
+      stream: _service.stateStream,
+      initialData: _service.state,
+      builder: (context, snap) {
+        final state = snap.data ?? ServerState.idle;
+        final isRunning = state != ServerState.idle;
+        return WithForegroundTask(
+          child: Scaffold(
+          backgroundColor: Theme.of(context).colorScheme.surface,
+          appBar: AppBar(
+            title: const Text('NetShelfy+', style: TextStyle(fontWeight: FontWeight.bold)),
+            centerTitle: true,
+            elevation: 0,
+            actions: [
+              IconButton(
+                icon: const Icon(Icons.settings_outlined),
+                tooltip: 'Pengaturan',
+                onPressed: isRunning ? null : _openSettings,
+              ),
+            ],
+          ),
+          body: Column(children: [
+            Expanded(
+              child: Center(
+                child: Column(mainAxisSize: MainAxisSize.min, children: [
+                  AnimatedContainer(
+                    duration: const Duration(milliseconds: 400),
+                    width: state == ServerState.active ? 200 : 180,
+                    height: state == ServerState.active ? 200 : 180,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: _ringColor(state).withOpacity(0.12)),
+                    child: Center(
+                      child: ScaleTransition(
+                        scale: state == ServerState.active ? _pulseAnim : const AlwaysStoppedAnimation(1.0),
+                        child: GestureDetector(
+                          onTap: _onMainButton,
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 400),
+                            curve: Curves.easeInOut,
+                            width: 150, height: 150,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: _buttonColor(state),
+                              boxShadow: [BoxShadow(
+                                color: _buttonColor(state).withOpacity(0.45),
+                                blurRadius: 24, spreadRadius: 4)]),
+                            child: Icon(_buttonIcon(state), size: 60, color: Colors.white),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  AnimatedSwitcher(
+                    duration: const Duration(milliseconds: 300),
+                    child: Text(_stateLabel(state),
+                      key: ValueKey(state),
+                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: _buttonColor(state))),
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    state == ServerState.idle ? 'Tap untuk memulai server' : 'Tap untuk kontrol server',
+                    style: TextStyle(fontSize: 13, color: Colors.grey.shade500)),
+                ]),
+              ),
+            ),
+
+            // ── IP pill + dropdown — di luar Expanded ────────────
+            if (isRunning)
+              _buildIpSection(context),
+            Container(
+              margin: const EdgeInsets.fromLTRB(16, 0, 16, 24),
+              decoration: BoxDecoration(
+                border: Border.all(color: Theme.of(context).colorScheme.outline.withOpacity(0.3)),
+                borderRadius: BorderRadius.circular(14),
+                color: Theme.of(context).colorScheme.surfaceVariant.withOpacity(0.3)),
+              child: ListTile(
+                leading: const Icon(Icons.folder_rounded, color: Colors.amber, size: 28),
+                title: Text(_selectedFolder, style: const TextStyle(fontSize: 13), overflow: TextOverflow.ellipsis),
+                subtitle: const Text('Folder yang akan di-serve', style: TextStyle(fontSize: 11)),
+                trailing: TextButton(onPressed: isRunning ? null : _pickFolder, child: const Text('Ganti')),
+              ),
+            ),
+          ]),
+        ),
+      );
+      },
+    );
+  }
+
+  Color _ringColor(ServerState s) {
+    switch (s) {
+      case ServerState.idle:   return Colors.blueGrey;
+      case ServerState.active: return Colors.green;
+      case ServerState.paused: return Colors.orange;
+    }
+  }
+  Color _buttonColor(ServerState s) {
+    switch (s) {
+      case ServerState.idle:   return Colors.blueGrey.shade600;
+      case ServerState.active: return Colors.green.shade600;
+      case ServerState.paused: return Colors.orange.shade700;
+    }
+  }
+  IconData _buttonIcon(ServerState s) {
+    switch (s) {
+      case ServerState.idle:   return Icons.power_settings_new_rounded;
+      case ServerState.active: return Icons.cloud_upload_rounded;
+      case ServerState.paused: return Icons.pause_rounded;
+    }
+  }
+  String _stateLabel(ServerState s) {
+    switch (s) {
+      case ServerState.idle:   return 'Idle';
+      case ServerState.active: return 'Active';
+      case ServerState.paused: return 'Paused';
+    }
+  }
+
+  // ── IP pill + dropdown ────────────────────────────────────────
+  Widget _buildIpSection(BuildContext context) {
+    final cs   = Theme.of(context).colorScheme;
+    final port = _settings.port;
+    // Teks yang ditampilkan di pill: IP private kalau sudah ada, fallback placeholder
+    final pillUrl = _privateIp != null
+        ? 'http://$_privateIp:$port'
+        : 'http://[IP-HP]:$port';
+
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          // ── Pill (collapsed) ──────────────────────────────────
+          GestureDetector(
+            onTap: () => setState(() => _ipExpanded = !_ipExpanded),
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 200),
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+              decoration: BoxDecoration(
+                color: cs.surfaceVariant.withOpacity(0.4),
+                border: Border.all(color: cs.outline.withOpacity(0.25)),
+                borderRadius: _ipExpanded
+                    ? const BorderRadius.vertical(top: Radius.circular(12))
+                    : BorderRadius.circular(12),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(children: [
+                    Text('Akses dari browser:',
+                        style: TextStyle(fontSize: 11, color: Colors.grey.shade500)),
+                    const Spacer(),
+                    AnimatedRotation(
+                      turns: _ipExpanded ? 0.5 : 0,
+                      duration: const Duration(milliseconds: 250),
+                      child: Icon(Icons.keyboard_arrow_down_rounded,
+                          size: 18, color: Colors.grey.shade500),
+                    ),
+                  ]),
+                  const SizedBox(height: 2),
+                  Text(
+                    pillUrl,
+                    style: TextStyle(
+                      fontFamily: 'monospace',
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: cs.primary,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          // ── Dropdown ─────────────────────────────────────────
+          AnimatedCrossFade(
+            duration: const Duration(milliseconds: 250),
+            crossFadeState: _ipExpanded
+                ? CrossFadeState.showSecond
+                : CrossFadeState.showFirst,
+            firstChild: const SizedBox.shrink(),
+            secondChild: Container(
+              decoration: BoxDecoration(
+                color: cs.surfaceVariant.withOpacity(0.4),
+                border: Border(
+                  left: BorderSide(color: cs.outline.withOpacity(0.25)),
+                  right: BorderSide(color: cs.outline.withOpacity(0.25)),
+                  bottom: BorderSide(color: cs.outline.withOpacity(0.25)),
+                ),
+                borderRadius: const BorderRadius.vertical(
+                    bottom: Radius.circular(12)),
+              ),
+              child: Column(children: [
+                Divider(height: 1, color: cs.outline.withOpacity(0.15)),
+                _ipRow(
+                  context: context, label: 'Loopback',
+                  sublabel: 'Browser di HP ini',
+                  icon: Icons.phone_android_rounded, color: Colors.blueGrey,
+                  ip: _loopbackIp, port: port, loading: false,
+                ),
+                Divider(height: 1, indent: 14, color: cs.outline.withOpacity(0.1)),
+                _ipRow(
+                  context: context, label: 'Local (WiFi)',
+                  sublabel: 'Perangkat di jaringan sama',
+                  icon: Icons.wifi_rounded, color: Colors.green.shade600,
+                  ip: _privateIp, port: port,
+                  loading: _fetchingIp && _privateIp == null,
+                ),
+                Divider(height: 1, indent: 14, color: cs.outline.withOpacity(0.1)),
+                _ipRow(
+                  context: context, label: 'Public',
+                  sublabel: 'Dari internet (perlu port forward)',
+                  icon: Icons.public_rounded, color: Colors.orange.shade700,
+                  ip: _publicIp, port: port,
+                  loading: _fetchingIp && _publicIp == null,
+                ),
+              ]),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ── IP row widget ─────────────────────────────────────────────
+  Widget _ipRow({
+    required BuildContext context,
+    required String label,
+    required String sublabel,
+    required IconData icon,
+    required Color color,
+    required String? ip,
+    required int port,
+    required bool loading,
+  }) {
+    final url = ip != null ? 'http://$ip:$port' : null;
+    final cs = Theme.of(context).colorScheme;
+
+    return GestureDetector(
+      onTap: url == null ? null : () {
+        Clipboard.setData(ClipboardData(text: url));
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text('Disalin: $url'),
+          duration: const Duration(seconds: 2),
+          behavior: SnackBarBehavior.floating,
+        ));
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        decoration: BoxDecoration(
+          color: cs.surfaceVariant.withOpacity(0.4),
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(color: cs.outline.withOpacity(0.2)),
+        ),
+        child: Row(children: [
+          Container(
+            width: 32, height: 32,
+            decoration: BoxDecoration(
+              color: color.withOpacity(0.12),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Icon(icon, size: 17, color: color),
+          ),
+          const SizedBox(width: 10),
+          Expanded(child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(label, style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600)),
+              Text(sublabel, style: TextStyle(fontSize: 10, color: Colors.grey.shade500)),
+            ],
+          )),
+          if (loading)
+            SizedBox(
+              width: 14, height: 14,
+              child: CircularProgressIndicator(strokeWidth: 1.5, color: color),
+            )
+          else if (url != null)
+            Row(mainAxisSize: MainAxisSize.min, children: [
+              Text(
+                url,
+                style: TextStyle(
+                  fontFamily: 'monospace',
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: color,
+                ),
+              ),
+              const SizedBox(width: 6),
+              Icon(Icons.copy_rounded, size: 13, color: Colors.grey.shade400),
+            ])
+          else
+            Text('Tidak tersedia', style: TextStyle(fontSize: 11, color: Colors.grey.shade400)),
+        ]),
+      ),
+    );
+  }
+}
+1_0__QXKWZ__1_0
+
+# ```dart
+cat <<'1_0__QXZKW__1_0' > "lib/screens/settings_screen.dart"
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import '../models/settings_model.dart';
+
+class SettingsScreen extends StatefulWidget {
+  final AppSettings settings;
+  final ValueChanged<AppSettings> onChanged;
+  final String selectedFolder;
+  const SettingsScreen({
+    super.key,
+    required this.settings,
+    required this.onChanged,
+    this.selectedFolder = '/sdcard',
+  });
+
+  @override
+  State<SettingsScreen> createState() => _SettingsScreenState();
+}
+
+class _SettingsScreenState extends State<SettingsScreen> {
+  late AppSettings _s;
+  late TextEditingController _portCtrl;
+  late TextEditingController _authUserCtrl;
+  late TextEditingController _authPassCtrl;
+  bool _authEnabled = false;
+  bool _authPassVisible = false;
+  late TextEditingController _authUpUserCtrl;
+  late TextEditingController _authUpPassCtrl;
+  bool _authUpEnabled = false;
+  bool _authUpPassVisible = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _s = widget.settings;
+    _portCtrl = TextEditingController(text: _s.port == 8000 ? '' : '${_s.port}');
+
+    final authParts = _s.basicAuth.split(':');
+    _authEnabled  = _s.basicAuth.isNotEmpty;
+    _authUserCtrl = TextEditingController(text: authParts.isNotEmpty ? authParts[0] : '');
+    _authPassCtrl = TextEditingController(
+        text: authParts.length >= 2 ? authParts.sublist(1).join(':') : '');
+
+    final authUpParts = _s.basicAuthUpload.split(':');
+    _authUpEnabled  = _s.basicAuthUpload.isNotEmpty;
+    _authUpUserCtrl = TextEditingController(text: authUpParts.isNotEmpty ? authUpParts[0] : '');
+    _authUpPassCtrl = TextEditingController(
+        text: authUpParts.length >= 2 ? authUpParts.sublist(1).join(':') : '');
+  }
+
+  @override
+  void dispose() {
+    _portCtrl.dispose();
+    _authUserCtrl.dispose(); _authPassCtrl.dispose();
+    _authUpUserCtrl.dispose(); _authUpPassCtrl.dispose();
+    super.dispose();
+  }
+
+  void _save() {
+    final port = int.tryParse(_portCtrl.text.trim()) ?? 8000;
+    String basicAuth = '';
+    if (_authEnabled) {
+      final u = _authUserCtrl.text.trim();
+      final p = _authPassCtrl.text;
+      if (u.isNotEmpty && p.isNotEmpty) basicAuth = '$u:$p';
+    }
+    String basicAuthUpload = '';
+    if (_authUpEnabled) {
+      final u = _authUpUserCtrl.text.trim();
+      final p = _authUpPassCtrl.text;
+      if (u.isNotEmpty && p.isNotEmpty) basicAuthUpload = '$u:$p';
+    }
+    final updated = _s.copyWith(
+      port: port.clamp(1, 65535),
+      basicAuth: basicAuth,
+      basicAuthUpload: basicAuthUpload,
+      keepAlive: _s.keepAlive,
+    );
+    widget.onChanged(updated);
+    Navigator.pop(context);
+  }
+
+  void _setTheme(ThemeMode m) {
+    setState(() => _s = _s.copyWith(themeMode: m));
+    widget.onChanged(_s);
+  }
+
+  String get _cmdPreview {
+    final port = int.tryParse(_portCtrl.text.trim()) ?? 8000;
+    final parts = [
+      'python -m uploadserver',
+      '  --bind 0.0.0.0',
+      '  --directory ${widget.selectedFolder}',
+      '  --theme ${_s.themeArg}',
+    ];
+    if (_authEnabled && _authUserCtrl.text.isNotEmpty && _authPassCtrl.text.isNotEmpty) {
+      parts.add('  --basic-auth ${_authUserCtrl.text}:${'•' * _authPassCtrl.text.length}');
+    }
+    if (_authUpEnabled && _authUpUserCtrl.text.isNotEmpty && _authUpPassCtrl.text.isNotEmpty) {
+      parts.add('  --basic-auth-upload ${_authUpUserCtrl.text}:${'•' * _authUpPassCtrl.text.length}');
+    }
+    parts.add('  $port');
+    return parts.join('\n');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Pengaturan', style: TextStyle(fontWeight: FontWeight.bold)),
+        centerTitle: true,
+        actions: [
+          TextButton(
+            onPressed: _save,
+            child: const Text('Simpan', style: TextStyle(fontWeight: FontWeight.bold)),
+          ),
+        ],
+      ),
+      body: ListView(
+        padding: const EdgeInsets.only(bottom: 32),
+        children: [
+          _sectionLabel('Tampilan'),
+          _card([_themeTile(cs)]),
+
+          _sectionLabel('Latar Belakang'),
+          _card([
+            Padding(
+              padding: const EdgeInsets.all(14),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(children: [
+                    Container(
+                      width: 32, height: 32,
+                      decoration: BoxDecoration(
+                        color: Colors.green.withOpacity(0.12),
+                        borderRadius: BorderRadius.circular(9),
+                      ),
+                      child: const Icon(Icons.bolt_rounded,
+                          size: 18, color: Colors.green),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text('Tetap Aktif di Background',
+                            style: TextStyle(fontSize: 15)),
+                        Text('Server tetap jalan meski app ditutup',
+                            style: TextStyle(fontSize: 11,
+                                color: cs.onSurfaceVariant)),
+                      ],
+                    )),
+                    Switch(
+                      value: _s.keepAlive,
+                      onChanged: (v) {
+                        setState(() => _s = _s.copyWith(keepAlive: v));
+                        widget.onChanged(_s);
+                      },
+                    ),
+                  ]),
+                  // Hint saat aktif
+                  if (_s.keepAlive) ...[
+                    const SizedBox(height: 10),
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.green.withOpacity(0.06),
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                            color: Colors.green.withOpacity(0.2)),
+                      ),
+                      child: Row(children: [
+                        const Icon(Icons.notifications_outlined,
+                            size: 14, color: Colors.green),
+                        const SizedBox(width: 8),
+                        Expanded(child: Text(
+                          'Notifikasi permanen akan muncul selama server aktif',
+                          style: TextStyle(fontSize: 11,
+                              color: Colors.green.shade700, height: 1.4),
+                        )),
+                      ]),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ]),
+
+          _sectionLabel('Server'),
+          _card([
+            _expandTile(
+              icon: Icons.lan_outlined, iconColor: cs.primary,
+              title: 'Port', subtitle: 'Default 8000 jika dikosongkan',
+              child: _inputWrap(
+                prefix: ':', suffix: 'PORT',
+                child: TextField(
+                  controller: _portCtrl,
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                  style: _monoStyle(context),
+                  decoration: _inputDeco('8000'),
+                  onChanged: (_) => setState(() {}),
+                ),
+              ),
+            ),
+            const Divider(height: 1),
+            _authTile(
+              icon: Icons.lock_outline, iconColor: cs.error,
+              title: 'Basic Auth', subtitle: 'Proteksi download & upload',
+              enabled: _authEnabled, onToggle: (v) => setState(() => _authEnabled = v),
+              userCtrl: _authUserCtrl, passCtrl: _authPassCtrl,
+              passVisible: _authPassVisible,
+              onPassToggle: () => setState(() => _authPassVisible = !_authPassVisible),
+            ),
+            const Divider(height: 1),
+            _authTile(
+              icon: Icons.lock_clock_outlined, iconColor: Colors.orange.shade700,
+              title: 'Auth Upload Saja', subtitle: 'Hanya proteksi upload',
+              enabled: _authUpEnabled, onToggle: (v) => setState(() => _authUpEnabled = v),
+              userCtrl: _authUpUserCtrl, passCtrl: _authUpPassCtrl,
+              passVisible: _authUpPassVisible,
+              onPassToggle: () => setState(() => _authUpPassVisible = !_authUpPassVisible),
+            ),
+          ]),
+
+          _sectionLabel('Preview Command'),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: cs.surfaceVariant.withOpacity(0.5),
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: cs.outline.withOpacity(0.3))),
+              child: SelectableText(_cmdPreview,
+                style: TextStyle(fontFamily: 'monospace', fontSize: 11,
+                    color: cs.onSurfaceVariant, height: 1.7)),
+            ),
+          ),
+
+          _sectionLabel('Tentang'),
+          _card([
+            ListTile(
+              leading: Icon(Icons.info_outline, color: cs.primary),
+              title: const Text('Versi'),
+              subtitle: const Text('NetShelfy+ for Android'),
+              trailing: Text('1.0.1',
+                  style: TextStyle(fontFamily: 'monospace', fontSize: 12, color: cs.onSurfaceVariant)),
+            ),
+          ]),
+        ],
+      ),
+    );
+  }
+
+  Widget _sectionLabel(String label) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 20, 20, 6),
+      child: Text(label.toUpperCase(),
+        style: TextStyle(fontSize: 11, fontWeight: FontWeight.w700,
+            letterSpacing: 1.5, color: Theme.of(context).colorScheme.primary)),
+    );
+  }
+
+  Widget _card(List<Widget> children) {
+    final cs = Theme.of(context).colorScheme;
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Card(
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(14),
+          side: BorderSide(color: cs.outline.withOpacity(0.25))),
+        clipBehavior: Clip.antiAlias,
+        child: Column(children: children),
+      ),
+    );
+  }
+
+  Widget _themeTile(ColorScheme cs) {
+    final modes = [
+      (ThemeMode.light,  'Terang', Icons.light_mode_outlined),
+      (ThemeMode.system, 'Sistem', Icons.brightness_auto_outlined),
+      (ThemeMode.dark,   'Gelap',  Icons.dark_mode_outlined),
+    ];
+    return Padding(
+      padding: const EdgeInsets.all(14),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Row(children: [
+          Icon(Icons.palette_outlined, size: 22, color: cs.primary),
+          const SizedBox(width: 12),
+          const Text('Tema', style: TextStyle(fontSize: 15)),
+        ]),
+        const SizedBox(height: 14),
+        Row(children: modes.map((item) {
+          final (mode, label, icon) = item;
+          final selected = _s.themeMode == mode;
+          return Expanded(child: GestureDetector(
+            onTap: () => _setTheme(mode),
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 200),
+              margin: const EdgeInsets.symmetric(horizontal: 4),
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: selected ? cs.primaryContainer : cs.surfaceVariant.withOpacity(0.4),
+                border: Border.all(
+                  color: selected ? cs.primary : cs.outline.withOpacity(0.3),
+                  width: selected ? 1.5 : 1)),
+              child: Column(mainAxisSize: MainAxisSize.min, children: [
+                Icon(icon, size: 22, color: selected ? cs.primary : cs.onSurfaceVariant),
+                const SizedBox(height: 6),
+                Text(label, style: TextStyle(
+                  fontSize: 11,
+                  fontWeight: selected ? FontWeight.w700 : FontWeight.normal,
+                  color: selected ? cs.primary : cs.onSurfaceVariant)),
+              ]),
+            ),
+          ));
+        }).toList()),
+      ]),
+    );
+  }
+
+  Widget _expandTile({
+    required IconData icon, required Color iconColor,
+    required String title, required String subtitle, required Widget child,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.all(14),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Row(children: [
+          Icon(icon, size: 22, color: iconColor),
+          const SizedBox(width: 12),
+          Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(title, style: const TextStyle(fontSize: 15)),
+            Text(subtitle, style: TextStyle(fontSize: 11,
+                color: Theme.of(context).colorScheme.onSurfaceVariant)),
+          ]),
+        ]),
+        const SizedBox(height: 10),
+        child,
+      ]),
+    );
+  }
+
+  Widget _authTile({
+    required IconData icon, required Color iconColor,
+    required String title, required String subtitle,
+    required bool enabled, required ValueChanged<bool> onToggle,
+    required TextEditingController userCtrl, required TextEditingController passCtrl,
+    required bool passVisible, required VoidCallback onPassToggle,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.all(14),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Row(children: [
+          Icon(icon, size: 22, color: iconColor),
+          const SizedBox(width: 12),
+          Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(title, style: const TextStyle(fontSize: 15)),
+            Text(subtitle, style: TextStyle(fontSize: 11,
+                color: Theme.of(context).colorScheme.onSurfaceVariant)),
+          ])),
+          Switch(value: enabled, onChanged: onToggle),
+        ]),
+        AnimatedCrossFade(
+          duration: const Duration(milliseconds: 250),
+          crossFadeState: enabled ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+          firstChild: const SizedBox.shrink(),
+          secondChild: Padding(
+            padding: const EdgeInsets.only(top: 10),
+            child: Row(children: [
+              Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                _fieldLabel('Username'),
+                _inputWrap(child: TextField(
+                  controller: userCtrl, style: _monoStyle(context),
+                  decoration: _inputDeco('admin'),
+                  onChanged: (_) => setState(() {}),
+                )),
+              ])),
+              const SizedBox(width: 8),
+              Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                _fieldLabel('Password'),
+                _inputWrap(
+                  suffixWidget: IconButton(
+                    icon: Icon(passVisible ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                        size: 18, color: Theme.of(context).colorScheme.onSurfaceVariant),
+                    padding: EdgeInsets.zero, constraints: const BoxConstraints(),
+                    onPressed: onPassToggle,
+                  ),
+                  child: TextField(
+                    controller: passCtrl, obscureText: !passVisible,
+                    style: _monoStyle(context),
+                    decoration: _inputDeco('••••••'),
+                    onChanged: (_) => setState(() {}),
+                  ),
+                ),
+              ])),
+            ]),
+          ),
+        ),
+      ]),
+    );
+  }
+
+  Widget _inputWrap({String? prefix, String? suffix, Widget? suffixWidget, required Widget child}) {
+    final cs = Theme.of(context).colorScheme;
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(color: cs.outline.withOpacity(0.4)),
+        borderRadius: BorderRadius.circular(10),
+        color: cs.surfaceVariant.withOpacity(0.3)),
+      child: Row(children: [
+        if (prefix != null)
+          Container(padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Text(prefix, style: TextStyle(fontFamily: 'monospace', fontSize: 12, color: cs.onSurfaceVariant))),
+        Expanded(child: child),
+        if (suffix != null)
+          Container(padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Text(suffix, style: TextStyle(fontFamily: 'monospace', fontSize: 10, color: cs.onSurfaceVariant))),
+        if (suffixWidget != null)
+          Padding(padding: const EdgeInsets.only(right: 4), child: suffixWidget),
+      ]),
+    );
+  }
+
+  Widget _fieldLabel(String text) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 4),
+      child: Text(text.toUpperCase(), style: TextStyle(
+        fontSize: 9, fontWeight: FontWeight.w700, letterSpacing: 1,
+        color: Theme.of(context).colorScheme.onSurfaceVariant)),
+    );
+  }
+
+  TextStyle _monoStyle(BuildContext ctx) =>
+      TextStyle(fontFamily: 'monospace', fontSize: 13, color: Theme.of(ctx).colorScheme.onSurface);
+
+  InputDecoration _inputDeco(String hint) => InputDecoration(
+    hintText: hint,
+    hintStyle: TextStyle(
+        color: Theme.of(context).colorScheme.onSurfaceVariant.withOpacity(0.5),
+        fontFamily: 'monospace', fontSize: 13),
+    border: InputBorder.none,
+    contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+    isDense: true,
+  );
+}
+1_0__QXZKW__1_0
+
+# ```dart
+cat <<'1_0__QXZWK__1_0' > "lib/screens/update_dialog.dart"
+// lib/screens/update_dialog.dart
+// Dialog yang muncul saat ada update tersedia
+
+import 'package:flutter/material.dart';
+import '../services/update_service.dart';
+
+class UpdateDialog extends StatefulWidget {
+  final UpdateInfo info;
+  const UpdateDialog({super.key, required this.info});
+
+  @override
+  State<UpdateDialog> createState() => _UpdateDialogState();
+}
+
+class _UpdateDialogState extends State<UpdateDialog> {
+  bool _downloading = false;
+  double _progress  = 0;
+  String? _error;
+
+  Future<void> _doUpdate() async {
+    setState(() { _downloading = true; _error = null; });
+
+    final path = await UpdateService.downloadApk(
+      widget.info.downloadUrl,
+      onProgress: (p) {
+        if (mounted) setState(() => _progress = p);
+      },
+    );
+
+    if (!mounted) return;
+
+    if (path == null) {
+      setState(() { _downloading = false; _error = 'Gagal mengunduh update.'; });
+      return;
+    }
+
+    final ok = await UpdateService.installApk(path);
+    if (!mounted) return;
+
+    if (!ok) {
+      setState(() { _downloading = false; _error = 'Gagal membuka installer.'; });
+    }
+    // Kalau ok: Android installer terbuka, dialog tetap di-dismiss otomatis
+    // karena activity berpindah ke installer
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+
+    return AlertDialog(
+      title: Row(children: [
+        Icon(Icons.system_update_rounded, color: cs.primary),
+        const SizedBox(width: 10),
+        const Text('Update Tersedia'),
+      ]),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Versi baru
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+            decoration: BoxDecoration(
+              color: cs.primaryContainer,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Row(mainAxisSize: MainAxisSize.min, children: [
+              Icon(Icons.new_releases_rounded, size: 16, color: cs.primary),
+              const SizedBox(width: 6),
+              Text(
+                'Versi ${widget.info.version} (build ${widget.info.buildNumber})',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: cs.primary,
+                  fontFamily: 'monospace',
+                  fontSize: 13,
+                ),
+              ),
+            ]),
+          ),
+
+          // Release notes
+          if (widget.info.releaseNotes != null && widget.info.releaseNotes!.isNotEmpty) ...[
+            const SizedBox(height: 12),
+            Text('Catatan:', style: TextStyle(fontSize: 12, color: cs.onSurfaceVariant)),
+            const SizedBox(height: 4),
+            Container(
+              constraints: const BoxConstraints(maxHeight: 120),
+              child: SingleChildScrollView(
+                child: Text(
+                  widget.info.releaseNotes!,
+                  style: const TextStyle(fontSize: 12),
+                ),
+              ),
+            ),
+          ],
+
+          // Progress bar saat download
+          if (_downloading) ...[
+            const SizedBox(height: 16),
+            Row(children: [
+              Expanded(child: LinearProgressIndicator(value: _progress > 0 ? _progress : null)),
+              const SizedBox(width: 10),
+              Text(
+                _progress > 0 ? '${(_progress * 100).toInt()}%' : '...',
+                style: const TextStyle(fontFamily: 'monospace', fontSize: 12),
+              ),
+            ]),
+            const SizedBox(height: 4),
+            Text(
+              _progress > 0 ? 'Mengunduh...' : 'Memulai unduhan...',
+              style: TextStyle(fontSize: 11, color: cs.onSurfaceVariant),
+            ),
+          ],
+
+          // Error
+          if (_error != null) ...[
+            const SizedBox(height: 12),
+            Row(children: [
+              Icon(Icons.error_outline, size: 16, color: cs.error),
+              const SizedBox(width: 6),
+              Expanded(child: Text(_error!, style: TextStyle(fontSize: 12, color: cs.error))),
+            ]),
+          ],
+        ],
+      ),
+      actions: _downloading
+          ? []
+          : [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('Nanti'),
+              ),
+              FilledButton.icon(
+                onPressed: _doUpdate,
+                icon: const Icon(Icons.download_rounded, size: 18),
+                label: const Text('Update Sekarang'),
+              ),
+            ],
+    );
+  }
+}
+1_0__QXZWK__1_0
+
+# ```Noidentifier
+cat <<'1_0__QXWKZ__1_0' > "lib/services/.nomedia"
+1_0__QXWKZ__1_0
+
+# ```dart
+cat <<'1_0__QXWZK__1_0' > "lib/services/foreground_service.dart"
+import 'dart:io';
+import 'package:flutter_foreground_task/flutter_foreground_task.dart';
+
+class ForegroundSvc {
+  static void init() {
+    FlutterForegroundTask.init(
+      androidNotificationOptions: AndroidNotificationOptions(
+        channelId:          'netshelfy_channel',
+        channelName:        'NetShelfy+',
+        channelDescription: 'Server sedang berjalan di background',
+        channelImportance:  NotificationChannelImportance.LOW,
+        priority:           NotificationPriority.LOW,
+      ),
+      iosNotificationOptions: const IOSNotificationOptions(),
+      foregroundTaskOptions: ForegroundTaskOptions(
+        eventAction:     ForegroundTaskEventAction.nothing(),
+        allowWakeLock:   true,
+        allowWifiLock:   true,
+      ),
+    );
+  }
+
+  static Future<void> requestPermission() async {
+    if (Platform.isAndroid) {
+      final result = await FlutterForegroundTask.checkNotificationPermission();
+      if (result != NotificationPermission.granted) {
+        await FlutterForegroundTask.requestNotificationPermission();
+      }
+    }
+  }
+
+  static Future<void> start({
+    required String directory,
+    required int port,
+  }) async {
+    if (await FlutterForegroundTask.isRunningService) return;
+    await FlutterForegroundTask.startService(
+      serviceId:         1001,
+      notificationTitle: 'NetShelfy+ Aktif',
+      notificationText:  '$directory · port $port',
+      notificationButtons: [
+        const NotificationButton(id: 'stop', text: 'Stop'),
+      ],
+      callback: _foregroundCallback,
+    );
+  }
+
+  static Future<void> stop() async {
+    if (await FlutterForegroundTask.isRunningService) {
+      await FlutterForegroundTask.stopService();
+    }
+  }
+
+  static Future<void> updateNotification({
+    required String title,
+    required String text,
+  }) async {
+    await FlutterForegroundTask.updateService(
+      notificationTitle: title,
+      notificationText:  text,
+    );
+  }
+}
+
+@pragma('vm:entry-point')
+void _foregroundCallback() {
+  FlutterForegroundTask.setTaskHandler(_NetShelfyTaskHandler());
+}
+
+class _NetShelfyTaskHandler extends TaskHandler {
+  @override
+  Future<void> onStart(DateTime timestamp, TaskStarter starter) async {}
+
+  @override
+  void onRepeatEvent(DateTime timestamp) {}
+
+  @override
+  Future<void> onDestroy(DateTime timestamp) async {}
+
+  @override
+  void onNotificationButtonPressed(String id) {
+    if (id == 'stop') {
+      FlutterForegroundTask.sendDataToMain({'action': 'stop'});
+    }
+  }
+}
+1_0__QXWZK__1_0
+
+# ```dart
+cat <<'1_0__QKXZW__1_0' > "lib/services/server_service.dart"
+import 'dart:async';
+import 'package:flutter/services.dart';
+import '../models/settings_model.dart';
+
+enum ServerState { idle, active, paused }
+
+class ServerService {
+  static const _channel = MethodChannel('com.twos.netshelfy.verseapp/server');
+
+  ServerState _state = ServerState.idle;
+  final _stateCtrl = StreamController<ServerState>.broadcast();
+
+  Stream<ServerState> get stateStream => _stateCtrl.stream;
+  ServerState get state => _state;
+
+  void _setState(ServerState s) {
+    _state = s;
+    _stateCtrl.add(s);
+  }
+
+  Future<String?> start(String directory, AppSettings settings) async {
+    try {
+      final result = await _channel.invokeMethod<String>('start', {
+        'directory':   directory,
+        'port':        settings.port,
+        'theme':       settings.themeArg,
+        'basicAuth':   settings.basicAuth,
+        'basicAuthUp': settings.basicAuthUpload,
+      });
+      if (result == 'ok' || result == 'already_running') {
+        _setState(ServerState.active);
+        return null;
+      }
+      return result ?? 'Unknown error';
+    } on PlatformException catch (e) {
+      return e.message ?? 'Platform error';
+    }
+  }
+
+  Future<void> pause() async {
+    try {
+      await _channel.invokeMethod('pause');
+      _setState(ServerState.paused);
+    } on PlatformException catch (_) {}
+  }
+
+  Future<void> resume() async {
+    try {
+      await _channel.invokeMethod('resume');
+      _setState(ServerState.active);
+    } on PlatformException catch (_) {}
+  }
+
+  Future<void> stop() async {
+    try {
+      await _channel.invokeMethod('stop');
+    } on PlatformException catch (_) {}
+    _setState(ServerState.idle);
+  }
+
+  void dispose() {
+    stop();
+    _stateCtrl.close();
+  }
+}
+1_0__QKXZW__1_0
+
+# ```dart
+cat <<'1_0__QKXWZ__1_0' > "lib/services/update_service.dart"
+// lib/services/update_service.dart
+//
+// Cek update dari GitHub Releases:
+//   GET https://api.github.com/repos/OWNER/REPO/releases/latest
+//   Bandingkan tag_name dengan versi app saat ini
+//   Kalau ada update → download APK → trigger Android installer
+
+import 'dart:convert';
+import 'dart:io';
+import 'package:flutter/services.dart';
+import 'package:package_info_plus/package_info_plus.dart';
+
+// ════════════════════════════════════════════════════════════════
+// KONFIGURASI — ganti sesuai repo kamu
+// ════════════════════════════════════════════════════════════════
+const _kGithubOwner = 'cloudy-claude';   // username GitHub kamu
+const _kGithubRepo  = 'release';       // nama repo
+const _kApkAsset    = 'app-release.apk'; // nama file APK di Release
+// ════════════════════════════════════════════════════════════════
+
+class UpdateInfo {
+  final String tagName;       // misal "v1.2.0"
+  final String version;       // misal "1.2.0"
+  final int buildNumber;      // misal 2
+  final String downloadUrl;
+  final String? releaseNotes;
+
+  const UpdateInfo({
+    required this.tagName,
+    required this.version,
+    required this.buildNumber,
+    required this.downloadUrl,
+    this.releaseNotes,
+  });
+}
+
+class UpdateService {
+  static const _updateChannel = MethodChannel('com.twos.netshelfy.verseapp/update');
+
+  // ── Cek apakah ada update ──────────────────────────────────────
+  /// Return null  = tidak ada update / gagal cek
+  /// Return UpdateInfo = ada update tersedia
+  static Future<UpdateInfo?> checkForUpdate() async {
+    try {
+      final info = await PackageInfo.fromPlatform();
+      final currentBuild = int.tryParse(info.buildNumber) ?? 0;
+
+      final apiUrl = 'https://api.github.com/repos/$_kGithubOwner/$_kGithubRepo/releases/latest';
+
+      final client = HttpClient();
+      client.connectionTimeout = const Duration(seconds: 10);
+      final req = await client.getUrl(Uri.parse(apiUrl));
+      req.headers.set('Accept', 'application/vnd.github+json');
+      req.headers.set('User-Agent', 'UploadServerApp');
+      final resp = await req.close();
+
+      if (resp.statusCode != 200) return null;
+
+      final body = await resp.transform(utf8.decoder).join();
+      client.close();
+
+      final json = jsonDecode(body) as Map<String, dynamic>;
+
+      final tagName = json['tag_name'] as String? ?? '';
+      final releaseBody = json['body'] as String?;
+
+      // Parse build number dari tag — format: v{version}+{build} atau v{version}
+      // Contoh: "v1.2.0+5" → build=5, "v1.2.0" → build=1
+      int remoteBuild = 1;
+      String remoteVersion = tagName.replaceFirst('v', '');
+      if (tagName.contains('+')) {
+        final parts = tagName.split('+');
+        remoteVersion = parts[0].replaceFirst('v', '');
+        remoteBuild = int.tryParse(parts[1]) ?? 1;
+      }
+
+      // Tidak ada update jika build number sama atau lebih kecil
+      if (remoteBuild <= currentBuild) return null;
+
+      // Cari URL APK di assets release
+      final assets = json['assets'] as List<dynamic>? ?? [];
+      String? downloadUrl;
+      for (final asset in assets) {
+        final name = asset['name'] as String? ?? '';
+        if (name == _kApkAsset) {
+          downloadUrl = asset['browser_download_url'] as String?;
+          break;
+        }
+      }
+
+      if (downloadUrl == null) return null;
+
+      return UpdateInfo(
+        tagName:      tagName,
+        version:      remoteVersion,
+        buildNumber:  remoteBuild,
+        downloadUrl:  downloadUrl,
+        releaseNotes: releaseBody,
+      );
+    } catch (_) {
+      return null;
+    }
+  }
+
+  // ── Download APK ───────────────────────────────────────────────
+  /// [onProgress] dipanggil dengan nilai 0.0–1.0
+  static Future<String?> downloadApk(
+    String url, {
+    void Function(double)? onProgress,
+  }) async {
+    try {
+      final client = HttpClient();
+      final req  = await client.getUrl(Uri.parse(url));
+      final resp = await req.close();
+
+      if (resp.statusCode != 200) return null;
+
+      // Simpan ke cache internal app
+      final dir = Directory(
+        '${(await _getCacheDir())}/updates',
+      );
+      if (!dir.existsSync()) dir.createSync(recursive: true);
+
+      final file = File('${dir.path}/update.apk');
+      if (file.existsSync()) file.deleteSync();
+
+      final total    = resp.contentLength;
+      int downloaded = 0;
+      final sink     = file.openWrite();
+
+      await for (final chunk in resp) {
+        sink.add(chunk);
+        downloaded += chunk.length;
+        if (total > 0 && onProgress != null) {
+          onProgress(downloaded / total);
+        }
+      }
+
+      await sink.close();
+      client.close();
+
+      return file.path;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  // ── Trigger Android package installer ─────────────────────────
+  static Future<bool> installApk(String apkPath) async {
+    try {
+      await _updateChannel.invokeMethod('installApk', {'path': apkPath});
+      return true;
+    } on PlatformException catch (_) {
+      return false;
+    }
+  }
+
+  // ── Helper: cache dir ──────────────────────────────────────────
+  static Future<String> _getCacheDir() async {
+    // Coba beberapa path cache internal Android yang umum
+    final candidates = [
+      '/data/user/0/com.twos.netshelfy.verseapp/cache',
+      '/data/data/com.twos.netshelfy.verseapp/cache',
+    ];
+    for (final p in candidates) {
+      try {
+        final d = Directory(p);
+        if (!d.existsSync()) d.createSync(recursive: true);
+        if (d.existsSync()) return p;
+      } catch (_) {}
+    }
+    return Directory.systemTemp.path;
+  }
+}
+1_0__QKXWZ__1_0
+
+# ```yaml
+cat <<'1_0__QKZXW__1_0' > "pubspec.yaml"
+name: netshelfy
+description: Python Upload Server — bundled via Chaquopy
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  permission_handler: ^11.3.1
+  shared_preferences: ^2.2.3
+  package_info_plus: ^8.0.0
+  flutter_foreground_task: ^8.0.1   # background service
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+1_0__QKZXW__1_0
